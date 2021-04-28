@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 180 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-160,-190)">
+        <path id="eyes8" d="M221.893,221.859C214.539,210.713 214.336,189.929 196,190.982C152.378,190.982 177.236,205.289 160.593,206.42C176.61,209.659 165.619,221.415 192.186,221.859C199.794,221.986 214.496,218.254 221.893,221.859ZM278.107,221.859C285.461,210.713 285.664,189.929 304,190.982C347.622,190.982 322.764,205.289 339.407,206.42C323.39,209.659 334.381,221.415 307.814,221.859C300.206,221.986 285.504,218.254 278.107,221.859Z" style="fill:#fff;"/>
+    </g>
+</svg>
