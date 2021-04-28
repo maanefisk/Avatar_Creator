@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+.colorchooser {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 .content {
   height: 100%;
   width: 100%;
@@ -18,6 +24,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100%;
 }
 .column1 .number {
   width: 6.6666666667%;
@@ -34,6 +41,9 @@ body {
 .column1 .number:hover {
   cursor: pointer;
   background: #1c7244;
+}
+.column1 .BG {
+  fill: #73caee;
 }
 
 .column2 {

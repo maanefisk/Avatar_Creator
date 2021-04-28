@@ -1,6 +1,11 @@
 body {
   margin: 0;
 }
+.colorchooser {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
 .content {
   height: 100%;
   width: 100%;
@@ -16,6 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 100%;
   }
   .number {
     width: 6.666666666666667%;
@@ -33,6 +39,9 @@ body {
       cursor: pointer;
       background: #1c7244;
     }
+  }
+  .BG {
+    fill:#73caee;
   }
 }
 .column2 {
