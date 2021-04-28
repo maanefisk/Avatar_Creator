@@ -2,23 +2,25 @@ body {
   margin: 0;
 }
 
+.content {
+  height: 100%;
+  width: 100%;
+  background: azure;
+  display: flex;
+  flex-direction: row;
+}
+
 .column1 {
-  width: 500px;
+  width: 70%;
 }
-
-.column2 {
-  width: 100px;
-}
-
-.numbersholder {
+.column1 .numbersholder {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-.number {
-  width: 50px;
+.column1 .number {
+  width: 6.6666666667%;
   height: 50px;
   background: #6aaa88;
   color: white;
@@ -26,9 +28,36 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 3px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
 }
-.number:hover {
+.column1 .number:hover {
   cursor: pointer;
+  background: #1c7244;
+}
+
+.column2 {
+  width: 30%;
+  background: azure;
+}
+.column2 .menutext {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.1428571429%;
+}
+.column2 .menutext:hover {
+  background: #6a83aa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.column2 .save {
+  background: #6aaa88;
+}
+.column2 .save:hover {
   background: #1c7244;
 }
 
