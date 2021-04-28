@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.column1 {
+  width: 500px;
+}
+
+.column2 {
+  width: 100px;
+}
+
+.numbersholder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  background: #6aaa88;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.number:hover {
+  cursor: pointer;
+  background: #1c7244;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
