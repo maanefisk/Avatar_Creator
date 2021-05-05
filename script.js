@@ -1,23 +1,6 @@
 const model = {
     categories: ["hair","neck","head","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","bangs","background"],
     counter : 0,
-    activecategory: 'background',
-
-    hair: 12,
-    neck: 2,
-    head: 2,
-    ears: 4,
-    shirt: 3,
-    eyelids: 1,
-    eyes: 10,
-    iris: 1,
-    pupils: 2,
-    brows: 10,
-    nose: 15,
-    lips: 11,
-    mouth: 6,
-    bangs: 7,
-    background: 1,
 };
 
 /*List items and their numbers*/
@@ -28,7 +11,7 @@ var textofcategories = "";
 var chosencategory = "";
 var counter = model.counter;
 var categories = model.categories;
-var activecategory = model.activecategory;
+var activecategory = '';
 let categoryathand;
 let numberathand;
 let numberlastathand;
@@ -67,13 +50,16 @@ function thenumber(chosennumber) {
     let elementathand = document.getElementById(newoelement);
     let elementlastathand = document.getElementById(oldoelement);
 
+    if (elementathand.classList.value == 'showbydefault') {
+        elementathand.classList.remove('showbydefault');
+    }
+
     elementathand.classList.remove('bydefault');
     elementathand.classList.add('show');
     elementlastathand.classList.add('bydefault');
     elementlastathand.classList.remove('show');
 
-    /*let elementtochange = document.querySelector(classofelement);
-    elementtochange.classList.toggle('bydefault');*/
+    console.log(elementathand);
 }
 
 function generateview() {

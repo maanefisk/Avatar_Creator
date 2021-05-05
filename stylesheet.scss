@@ -17,8 +17,12 @@ body {
   width: 70%;
 
   .avatarcreator {
+
     .bydefault {
       display: none;
+    }
+    .showbydefault {
+      display: unset;
     }
     .show {
       display: unset !important;
