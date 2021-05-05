@@ -2,9 +2,27 @@ body {
   margin: 0;
 }
 .colorchooser {
-  height: 50px;
-  width: 50px;
+
   border-radius: 50%;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch:hover {
+  border: none;
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: 0.3s;
 }
 .content {
   height: 100%;
@@ -53,7 +71,7 @@ body {
       background: #1c7244;
     }
   }
-  .BG {
+  .background1 {
     fill:#73caee;
   }
 }

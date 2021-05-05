@@ -14,7 +14,7 @@ var categories = model.categories;
 var activecategory = '';
 let categoryathand;
 let numberathand;
-let numberlastathand;
+let numberlastathand = '';
 let hair = 12;
 let neck = 2;
 let head = 2;
@@ -32,7 +32,7 @@ let bangs = 7;
 let background = 1;
 
 function changingcolor(thecolorpicker) {
-    var thebackground = document.getElementById("BG");
+    var thebackground = document.getElementById("background1");
     thebackground.style.fill = thecolorpicker.value;
 }
 function category(chosencategory) {
@@ -40,6 +40,7 @@ function category(chosencategory) {
     categoryathand = activecategory;
     generatenumbersview(activecategory);
 }
+
 function thenumber(chosennumber) {
     numberlastathand = numberathand;
     numberathand = chosennumber.innerText;
@@ -52,10 +53,15 @@ function thenumber(chosennumber) {
     let elementlastathand = document.getElementById(oldoelement);
     document.getElementById(defaultitem).classList.remove('showbydefault');
 
-    elementathand.classList.remove('bydefault');
-    elementathand.classList.add('show');
-    elementlastathand.classList.add('bydefault');
-    elementlastathand.classList.remove('show');
+    if (elementathand != elementlastathand) {
+        elementathand.classList.remove('bydefault');
+        elementathand.classList.add('show');
+    }
+
+    if (elementlastathand != '') {
+        elementlastathand.classList.add('bydefault');
+        elementlastathand.classList.remove('show');
+    }
 }
 
 function generateview() {
