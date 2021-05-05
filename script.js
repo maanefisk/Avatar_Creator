@@ -76,7 +76,7 @@ function generateview() {
             "\" class=\"menutext\" onClick=\"category(this)\">"
             +chosencategory +"</div>";
     }
-    textofcategories += "<div id=\"save\" class=\"menutext save\">save</div>";
+    textofcategories += "<div id=\"save\" class=\"menutext save\" onclick=\"download()\">save</div>";
 
     column2.innerHTML += textofcategories;
 }
@@ -93,5 +93,17 @@ function generatenumbersview(activeone) {
 
     numbersholder.innerHTML = textofnumbers;
 }
+
+/*function download() {
+    let svg = document.getElementById('avatar');
+    console.log(svg);
+
+    let blob = new Blob([svg], {type: 'image/svg+xml'});
+    let url = URL.createObjectURL(blob);
+    let image = document.createElement('img');
+    image.src = url;
+
+    image.addEventListener('load', () => URL.revokeObjectURL(url), {once: true});
+}*/
 
 
