@@ -2,14 +2,15 @@ body {
   margin: 0;
 }
 .colorchooser {
-
+  margin: 0;
+  padding: 0;
   border-radius: 50%;
 }
 input[type="color"] {
   -webkit-appearance: none;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
@@ -17,13 +18,13 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
-}
-input[type="color"]::-webkit-color-swatch:hover {
-  border: none;
-  transform: scale(1.2);
-  cursor: pointer;
   transition: 0.3s;
 }
+input[type="color"]::-webkit-color-swatch:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .content {
   height: 100%;
   width: 100%;
@@ -49,22 +50,31 @@ input[type="color"]::-webkit-color-swatch:hover {
 
   .numbersholder {
     width: 100%;
+    background: black;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    -webkit-justify-content: space-between;
   }
   .number {
-    width: 6.666666666666667%;
-    height: 50px;
-    background: #6aaa88;
     color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
+    transition: font-size 0.1s;
+    border: 1px solid white;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      background: #6a83aa;
+      cursor: pointer;
+      font-size: 25px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -77,21 +87,29 @@ input[type="color"]::-webkit-color-swatch:hover {
 }
 .column2 {
   width: 30%;
-  background: azure;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  -webkit-justify-content: space-between;
 
   .menutext {
+    color: white;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7.142857142857143%;
+    transition: font-size 0.1s;
+    border: 1px solid white;
+    height: 100%;
 
     &:hover {
       background: #6a83aa;
       cursor: pointer;
-      text-decoration: underline;
+      font-size: 25px;
     }
   }
   .save {
