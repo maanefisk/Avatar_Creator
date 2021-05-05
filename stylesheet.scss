@@ -16,6 +16,15 @@ body {
 .column1 {
   width: 70%;
 
+  .avatarcreator {
+    .bydefault {
+      display: none;
+    }
+    .show {
+      display: unset !important;
+    }
+  }
+
   .numbersholder {
     width: 100%;
     display: flex;
