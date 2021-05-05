@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="model.js"></script>
 </head>
-<body>
+<body onload="generateview()">
 <div class="content">
     <div id="column1" class="column1">
         <svg width="100%"  viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -203,6 +203,6 @@
 <div>
     <input type="color" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e66465">
 </div>
-<div id="test"></div>
+
 </body>
 </html>
