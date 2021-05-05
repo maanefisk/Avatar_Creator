@@ -46,20 +46,16 @@ function thenumber(chosennumber) {
     newoelement = categoryathand+numberathand;
     oldoelement = categoryathand+numberlastathand;
 
+    let defaultitem = categoryathand + '1';
 
     let elementathand = document.getElementById(newoelement);
     let elementlastathand = document.getElementById(oldoelement);
-
-    if (elementathand.classList.value == 'showbydefault') {
-        elementathand.classList.remove('showbydefault');
-    }
+    document.getElementById(defaultitem).classList.remove('showbydefault');
 
     elementathand.classList.remove('bydefault');
     elementathand.classList.add('show');
     elementlastathand.classList.add('bydefault');
     elementlastathand.classList.remove('show');
-
-    console.log(elementathand);
 }
 
 function generateview() {
