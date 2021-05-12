@@ -52,6 +52,7 @@ input[type=color]::-webkit-color-swatch:hover {
 }
 .column1 .numbersholder {
   width: 100%;
+  background: black;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -59,8 +60,7 @@ input[type=color]::-webkit-color-swatch:hover {
   -webkit-justify-content: space-between;
 }
 .column1 .number {
-  background: white;
-  color: black;
+  color: white;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -68,8 +68,8 @@ input[type=color]::-webkit-color-swatch:hover {
   justify-content: center;
   align-items: center;
   transition: font-size 0.1s;
-  border: 1px solid #c9c9c9;
-  height: 100%;
+  border: 1px solid white;
+  height: 30px;
   width: 100%;
 }
 .column1 .number:hover {
@@ -77,7 +77,10 @@ input[type=color]::-webkit-color-swatch:hover {
   cursor: pointer;
   font-size: 25px;
 }
-
+.column1 .number:hover {
+  cursor: pointer;
+  background: #1c7244;
+}
 .column1 .background1 {
   fill: #73caee;
 }

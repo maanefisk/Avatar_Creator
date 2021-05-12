@@ -12,9 +12,12 @@ var chosencategory = "";
 var counter = model.counter;
 var categories = model.categories;
 var activecategory = '';
-let categoryathand;
+let categoryathand = '';
 let numberathand;
 let numberlastathand = '';
+let chosenelement = '';
+
+/*How many elements inside each category:*/
 let hair = 12;
 let neck = 2;
 let head = 2;
@@ -31,10 +34,7 @@ let mouth = 6;
 let bangs = 7;
 let background = 1;
 
-function changingcolor(thecolorpicker) {
-    var thebackground = document.getElementById("background1");
-    thebackground.style.fill = thecolorpicker.value;
-}
+
 function category(chosencategory) {
     activecategory = chosencategory.innerText.toLowerCase();
     categoryathand = activecategory;
@@ -51,6 +51,7 @@ function thenumber(chosennumber) {
 
     let elementathand = document.getElementById(newoelement);
     let elementlastathand = document.getElementById(oldoelement);
+
     document.getElementById(defaultitem).classList.remove('showbydefault');
 
     if (elementathand != elementlastathand) {
@@ -58,10 +59,15 @@ function thenumber(chosennumber) {
         elementathand.classList.add('show');
     }
 
-    if (elementlastathand != '') {
+    if (elementlastathand != null) {
         elementlastathand.classList.add('bydefault');
         elementlastathand.classList.remove('show');
     }
+    chosenelement = elementathand;
+    console.log(elementathand)
+}
+function changingcolor(thecolorpicker) {
+    chosenelement.style.fill = thecolorpicker.value;
 }
 
 function generateview() {
