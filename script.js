@@ -15,7 +15,6 @@ var activecategory = '';
 let categoryathand = '';
 let numberathand;
 let numberlastathand = '';
-let numberlastathandthird = '';
 let chosenelement = '';
 
 /*How many elements inside each category:*/
@@ -43,28 +42,25 @@ function category(chosencategory) {
 }
 
 function thenumber(chosennumber) {
-    numberlastathandthird = numberlastathand;
     numberlastathand = numberathand;
     numberathand = chosennumber.innerText;
     newoelement = categoryathand+numberathand;
     oldoelement = categoryathand+numberlastathand;
-    oldestelement = categoryathand+numberlastathandthird;
 
     let defaultitem = categoryathand + '1';
 
     let elementathand = document.getElementById(newoelement);
     let elementlastathand = document.getElementById(oldoelement);
-    let elementlastathandthird = document.getElementById(oldestelement);
 
     document.getElementById(defaultitem).classList.remove('showbydefault');
 
     elementathand.classList.toggle('bydefault');
     elementathand.classList.toggle('show');
-    if (elementathand != elementlastathand) {
+    if ((elementathand != elementlastathand) && (elementlastathand != null)) {
         elementlastathand.classList.add('bydefault');
         elementlastathand.classList.remove('show');
     }
-    
+
     chosenelement = elementathand;
 }
 function changingcolor(thecolorpicker) {
