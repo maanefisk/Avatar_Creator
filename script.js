@@ -15,6 +15,7 @@ var activecategory = '';
 let categoryathand = '';
 let numberathand;
 let numberlastathand = '';
+let numberlastathandthird = '';
 let chosenelement = '';
 
 /*How many elements inside each category:*/
@@ -42,32 +43,43 @@ function category(chosencategory) {
 }
 
 function thenumber(chosennumber) {
+    numberlastathandthird = numberlastathand;
     numberlastathand = numberathand;
     numberathand = chosennumber.innerText;
     newoelement = categoryathand+numberathand;
     oldoelement = categoryathand+numberlastathand;
+    oldestelement = categoryathand+numberlastathandthird;
 
     let defaultitem = categoryathand + '1';
 
     let elementathand = document.getElementById(newoelement);
     let elementlastathand = document.getElementById(oldoelement);
+    let elementlastathandthird = document.getElementById(oldestelement);
 
     document.getElementById(defaultitem).classList.remove('showbydefault');
 
+    elementathand.classList.toggle('bydefault');
+    elementathand.classList.toggle('show');
     if (elementathand != elementlastathand) {
-        elementathand.classList.remove('bydefault');
-        elementathand.classList.add('show');
-    }
-
-    if (elementlastathand != null) {
         elementlastathand.classList.add('bydefault');
         elementlastathand.classList.remove('show');
     }
+    
     chosenelement = elementathand;
-    console.log(elementathand)
 }
 function changingcolor(thecolorpicker) {
+    let chosenelementinner = chosenelement.children;
+    let o = 0;
     chosenelement.style.fill = thecolorpicker.value;
+
+    if (chosenelement.children.length != 0) {
+        for (o = 0; o < chosenelement.children.length; o++) {
+            chosenelementinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
+            chosenelementinner[0].setAttribute('style', 'filter: brightness(0.85);')
+        }
+    }
+
+    /*console.log(chosenelementinner.children.length);*/
 }
 
 function generateview() {
