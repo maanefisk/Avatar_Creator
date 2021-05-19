@@ -89,12 +89,6 @@ input[type=color]::-webkit-color-swatch:hover {
   cursor: pointer;
   font-size: 25px;
 }
-.column2 .save {
-  background: #6aaa88;
-}
-.column2 .save:hover {
-  background: #1c7244;
-}
 
 .bottom {
   height: 20vh;
@@ -124,6 +118,7 @@ input[type=color]::-webkit-color-swatch:hover {
   transition: font-size 0.1s;
   border: 1px solid black;
   width: 100%;
+  animation: appear 0.3s ease-in-out;
 }
 .bottom .number:hover {
   background: #6a83aa;
@@ -133,6 +128,33 @@ input[type=color]::-webkit-color-swatch:hover {
 .bottom .number:hover {
   cursor: pointer;
   background: #c2a2af;
+}
+.bottom .save {
+  height: 50px;
+  width: 200px;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: font-size 0.1s;
+  border: 1px solid #aa7d7d;
+}
+.bottom .save:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

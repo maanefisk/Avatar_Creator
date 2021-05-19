@@ -90,7 +90,6 @@ function generateview() {
             "\" class=\"menutext\" onClick=\"category(this)\">"
             +chosencategory +"</div>";
     }
-    textofcategories += "<div id=\"save\" class=\"menutext save\" onclick=\"download()\">save</div>";
 
     column2.innerHTML += textofcategories;
 }
