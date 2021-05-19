@@ -8,9 +8,10 @@
     <script src="script.js"></script>
 </head>
 <body onload="generateview()">
+<div class="top"></div>
 <div class="content">
     <div id="column1" class="column1">
-        <svg id="avatar" width="100%"  viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+        <svg id="avatar"  viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g id="avatarcreator" class="avatarcreator">
         <rect id="background1" class="background1" x="0" y="0" width="500" height="500"/>
 
@@ -119,22 +120,23 @@
         <path id="bangs7" class="bydefault" d="M249.885,54.409C233.345,54.409 150.004,89.125 140.143,121.671C130.282,154.218 133.133,176.611 134.773,188.003C136.413,199.395 136.342,210.135 143.936,210.135C151.53,210.135 140.384,149.461 150.895,134.69C161.406,119.919 178.017,89.125 204.053,80.446C230.09,71.767 236.274,85.871 250.54,85.871C264.806,85.871 281.079,69.598 296.267,81.531C311.456,93.465 336.408,110.823 345.087,127.096C367.869,185.679 354.014,207.857 356.834,208.229C359.655,208.601 362.361,205.013 364.46,193.381C366.559,181.75 365.699,180.254 366.784,163.981C367.869,147.708 362.445,124.926 354.851,111.908C347.256,98.889 266.424,54.409 249.885,54.409Z" style="fill:#1c7244;"/>
     </g>
 </svg>
-
-        <div id="numbersholder" class="numbersholder">
-        </div>
     </div>
 
     <div id="column2" class="column2">
     </div>
-
 </div>
-<div>
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6a83aa">
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6aaa88">
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e25a32">
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#ecb079">
-    <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
+
+<div class="bottom">
+    <div id="numbersholder" class="numbersholder"></div>
+    <div class="colorpalette">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6a83aa">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6aaa88">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e25a32">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#ecb079">
+        <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
+    </div>
+
 </div>
 
 </body>

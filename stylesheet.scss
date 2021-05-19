@@ -24,6 +24,9 @@ input[type="color"]::-webkit-color-swatch:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
+.top {
+  height: 20vh;
+}
 
 .content {
   height: 100%;
@@ -31,10 +34,14 @@ input[type="color"]::-webkit-color-swatch:hover {
   background: azure;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+
 }
 .column1 {
-  width: 70%;
-
+  height: 500px;
+  #avatar {
+    height: 500px;
+  }
   .avatarcreator {
 
     .bydefault {
@@ -47,46 +54,13 @@ input[type="color"]::-webkit-color-swatch:hover {
       display: unset !important;
     }
   }
-
-  .numbersholder {
-    width: 100%;
-    background: black;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: stretch;
-    -webkit-justify-content: space-between;
-  }
-  .number {
-    color: white;
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: font-size 0.1s;
-    border: 1px solid white;
-    height: 30px;
-    width: 100%;
-
-    &:hover {
-      background: #6a83aa;
-      cursor: pointer;
-      font-size: 25px;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background: #1c7244;
-    }
-  }
   .background1 {
     fill:#73caee;
   }
 }
 .column2 {
-  width: 30%;
+  height: 500px;
+  width: 200px;
   background: black;
   display: flex;
   flex-direction: column;
@@ -103,7 +77,7 @@ input[type="color"]::-webkit-color-swatch:hover {
     justify-content: center;
     align-items: center;
     transition: font-size 0.1s;
-    border: 1px solid white;
+    border: 1px solid #aa7d7d;
     height: 100%;
 
     &:hover {
@@ -121,3 +95,47 @@ input[type="color"]::-webkit-color-swatch:hover {
   }
 
 }
+.bottom {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .numbersholder {
+    height: 50px;
+    width: 700px;
+    background: #f3ebeb;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    -webkit-justify-content: space-between;
+  }
+  .number {
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: font-size 0.1s;
+    border: 1px solid black;
+
+    width: 100%;
+
+    &:hover {
+      background: #6a83aa;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #c2a2af;
+    }
+  }
+}
+
+
