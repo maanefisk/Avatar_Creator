@@ -120,14 +120,13 @@ input[type=color]::-webkit-color-swatch:hover {
   width: 100%;
   animation: appear 0.3s ease-in-out;
 }
-.bottom .number:hover {
-  background: #6a83aa;
-  cursor: pointer;
-  font-size: 25px;
+.bottom .number:focus {
+  border: 3px solid red;
 }
 .bottom .number:hover {
   cursor: pointer;
   background: #c2a2af;
+  font-size: 25px;
 }
 .bottom .save {
   height: 50px;

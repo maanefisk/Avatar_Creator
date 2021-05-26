@@ -1,6 +1,21 @@
 const model = {
     categories: ["hair","neck","head","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","bangs","background"],
     counter : 0,
+    hair : '',
+    neck : '',
+    head : '',
+    ears : '',
+    shirt : '',
+    eyelids : '',
+    eyes : '',
+    iris : '',
+    pupils : '',
+    brows : '',
+    nose : '',
+    lips : '',
+    mouth : '',
+    bangs : '',
+    background : '',
 };
 
 /*List items and their numbers*/
@@ -14,8 +29,9 @@ var categories = model.categories;
 var activecategory = '';
 let categoryathand = '';
 let numberathand;
-let numberlastathand = '';
 let chosenelement = '';
+let defaultitem = '';
+let defaultbox;
 
 /*How many elements inside each category:*/
 let hair = 12;
@@ -34,33 +50,56 @@ let mouth = 6;
 let bangs = 7;
 let background = 1;
 
+function removepreviousStyle() {
+    let savedelement = document.getElementById(model[categoryathand]);
+    savedelement.classList.toggle('bydefault');
+    savedelement.classList.toggle('show');
+}
 
 function category(chosencategory) {
     activecategory = chosencategory.innerText.toLowerCase();
     categoryathand = activecategory;
     generatenumbersview(activecategory);
+
+    if (model[categoryathand] == '') {
+        defaultbox = categoryathand + '1';
+        defaultitem = document.getElementById(defaultbox);
+        chosenelement = defaultitem;
+        chosenelement.classList.remove('showbydefault');
+        chosenelement.classList.add('bydefault');
+        chosenelement.classList.toggle('bydefault');
+        chosenelement.classList.add('show');
+
+    }
+    if (model[categoryathand] != '') {
+        removepreviousStyle();
+        defaultbox = model[categoryathand];
+        let saveditem = document.getElementById(model[categoryathand]);
+        chosenelement = saveditem;
+        chosenelement.classList.remove('showbydefault');
+        chosenelement.classList.add('bydefault');
+        chosenelement.classList.toggle('bydefault');
+        chosenelement.classList.add('show');
+    }
+    model[categoryathand] = defaultbox;
 }
 
 function thenumber(chosennumber) {
-    numberlastathand = numberathand;
     numberathand = chosennumber.innerText;
     newoelement = categoryathand+numberathand;
-    oldoelement = categoryathand+numberlastathand;
 
-    let defaultitem = categoryathand + '1';
+    removepreviousStyle();
+
+    model[categoryathand] = newoelement;
+
+    chosenelement.classList.remove('show');
+    chosenelement.classList.add('bydefault');
 
     let elementathand = document.getElementById(newoelement);
-    let elementlastathand = document.getElementById(oldoelement);
-
-    document.getElementById(defaultitem).classList.remove('showbydefault');
 
     elementathand.classList.toggle('bydefault');
     elementathand.classList.toggle('show');
-    if ((elementathand != elementlastathand) && (elementlastathand != null)) {
-        elementlastathand.classList.add('bydefault');
-        elementlastathand.classList.remove('show');
-    }
-
+    
     chosenelement = elementathand;
 }
 function changingcolor(thecolorpicker) {
@@ -101,7 +140,7 @@ function generatenumbersview(activeone) {
     let activenumber = eval(activeone);
 
     for (n = 1; n < activenumber+1; n++) {
-        textofnumbers += "<div id=\"number"+n+"\" class=\"number\" onclick=\"thenumber(this)\">"+n+"</div>";
+        textofnumbers += "<button id=\"number"+n+"\" class=\"number\" onclick=\"thenumber(this)\">"+n+"</button>";
     }
 
     numbersholder.innerHTML = textofnumbers;
