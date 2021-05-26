@@ -81,7 +81,7 @@ input[type=color]::-webkit-color-swatch:hover {
   justify-content: center;
   align-items: center;
   transition: font-size 0.1s;
-  border: 1px solid #aa7d7d;
+  border: 1px solid #616161;
   height: 100%;
 }
 .column2 .menutext:hover {
@@ -128,9 +128,12 @@ input[type=color]::-webkit-color-swatch:hover {
   background: #c2a2af;
   font-size: 25px;
 }
-.bottom .save {
+.bottom .buttonholder {
+  display: flex;
+  flex-direction: row;
+}
+.bottom .buttonius {
   height: 50px;
-  width: 200px;
   color: black;
   font-family: Roboto, sans-serif;
   font-size: 20px;
@@ -141,10 +144,20 @@ input[type=color]::-webkit-color-swatch:hover {
   transition: font-size 0.1s;
   border: 1px solid #aa7d7d;
 }
-.bottom .save:hover {
+.bottom .buttonius:hover {
   background: #e8e8e8;
   cursor: pointer;
   font-size: 25px;
+}
+.bottom .save {
+  width: 200px;
+}
+.bottom .redo {
+  width: 50px;
+  font-size: 40px;
+}
+.bottom .redo:hover {
+  font-size: 45px;
 }
 
 @keyframes appear {

@@ -99,7 +99,7 @@ function thenumber(chosennumber) {
 
     elementathand.classList.toggle('bydefault');
     elementathand.classList.toggle('show');
-    
+
     chosenelement = elementathand;
 }
 function changingcolor(thecolorpicker) {
