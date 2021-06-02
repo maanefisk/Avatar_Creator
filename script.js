@@ -1,3 +1,4 @@
+/*Here is all categories stored, counter is stored and which chosen element is stored*/
 const model = {
     categories: ["hair","neck","head","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","bangs","background"],
     counter : 0,
@@ -105,7 +106,12 @@ function thenumber(chosennumber) {
 function changingcolor(thecolorpicker) {
     let chosenelementinner = chosenelement.children;
     let o = 0;
-    chosenelement.style.fill = thecolorpicker.value;
+
+    if (thecolorpicker.value == undefined) {
+        chosenelement.style.fill = thecolorpicker.style.background;
+    } else {
+        chosenelement.style.fill = thecolorpicker.value;
+    }
 
     if (chosenelement.children.length != 0) {
         for (o = 0; o < chosenelement.children.length; o++) {

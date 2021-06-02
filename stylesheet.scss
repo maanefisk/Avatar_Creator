@@ -1,5 +1,10 @@
+* {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   margin: 0;
+  background: #EBEBEB;
 }
 .colorchooser {
   margin: 0;
@@ -31,7 +36,6 @@ input[type="color"]::-webkit-color-swatch:hover {
 .content {
   height: 100%;
   width: 100%;
-  background: azure;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -89,7 +93,7 @@ input[type="color"]::-webkit-color-swatch:hover {
 
 }
 .bottom {
-  height: 20vh;
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -127,6 +131,41 @@ input[type="color"]::-webkit-color-swatch:hover {
       font-size: 25px;
     }
   }
+
+  .colorpalette {
+    width: 700px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .innercolorpalette {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .paletteheader {
+        width: 100%;
+        text-align: center;
+      }
+
+      .colorchooser {
+        padding: 0 2px;
+      }
+      .colordiv {
+        height: 40px;
+        width: 40px;
+        background: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin: 0 2px;
+      }
+    }
+  }
+
 
   .buttonholder {
     display: flex;
