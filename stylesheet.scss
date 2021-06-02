@@ -162,6 +162,11 @@ input[type="color"]::-webkit-color-swatch:hover {
         cursor: pointer;
         box-sizing: border-box;
         margin: 0 2px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
