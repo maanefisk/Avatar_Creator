@@ -1,7 +1,6 @@
 /*Here is all categories stored, counter is stored and which chosen element is stored*/
 const model = {
     categories: ["hair","neck","head","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","bangs","background"],
-    counter : 0,
     hair : '',
     neck : '',
     head : '',
@@ -21,12 +20,10 @@ const model = {
 };
 
 /*List items and their numbers*/
-/*console.log(categories[counter-1]+(counter-1));*/
 
 var i;
 var textofcategories = "";
 var chosencategory = "";
-var counter = model.counter;
 var categories = model.categories;
 var activecategory = '';
 let categoryathand = '';
@@ -139,8 +136,7 @@ function generateview() {
     let column2 = document.getElementById("column2");
 
     for (i = 0; i < categories.length; i++) {
-        counter++;
-        chosencategory = categories[counter-1];
+        chosencategory = categories[i];
 
         textofcategories += "<div id=\""
             +chosencategory+
