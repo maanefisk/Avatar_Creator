@@ -110,30 +110,32 @@ function thenumber(chosennumber) {
 /*Changes color of hair of chosen category*/
 function changingcolor(thecolorpicker) {
     let o = 0;
+    if (chosenelement == '') {
+        document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value;
+    } else {
+        /*Gives the background if the colorchooser is DIV/Not customizable*/
+        if (thecolorpicker.value == undefined) {
+            chosenelement.style.fill = thecolorpicker.style.background;
+        }
+        /*Gives the background if the colorchooser is INPUT/Customizable*/
+        else {
+            chosenelement.style.fill = thecolorpicker.value;
+        }
 
-    /*Gives the background if the colorchooser is DIV/Not customizable*/
-    if (thecolorpicker.value == undefined) {
-        chosenelement.style.fill = thecolorpicker.style.background;
-    }
-    /*Gives the background if the colorchooser is INPUT/Customizable*/
-    else {
-        chosenelement.style.fill = thecolorpicker.value;
-    }
-
-    /*Makes all other elements in category change to the color you've chosen*/
-    for (x = 1; x <= eval(activecategory); x++) {
-        let allincategory = document.getElementById(activecategory+x);
-        allincategory.style.fill = chosenelement.style.fill;
-        let allincategoryinner = allincategory.children;
-        /*If element contains more parts, it gives a lighter color to other parts to make it look prettier*/
-        if (allincategory.children.length != 0) {
-            for (o = 0; o < allincategory.children.length; o++) {
-                allincategoryinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
-                allincategoryinner[0].setAttribute('style', 'filter: brightness(0.85);')
+        /*Makes all other elements in category change to the color you've chosen*/
+        for (x = 1; x <= eval(activecategory); x++) {
+            let allincategory = document.getElementById(activecategory+x);
+            allincategory.style.fill = chosenelement.style.fill;
+            let allincategoryinner = allincategory.children;
+            /*If element contains more parts, it gives a lighter color to other parts to make it look prettier*/
+            if (allincategory.children.length != 0) {
+                for (o = 0; o < allincategory.children.length; o++) {
+                    allincategoryinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
+                    allincategoryinner[0].setAttribute('style', 'filter: brightness(0.85);')
+                }
             }
         }
     }
-
     /*console.log(chosenelement.children.length);*/
 }
 
