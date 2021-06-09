@@ -128,295 +128,326 @@
 
 <div class="bottom">
     <div id="numbersholder" class="numbersholder"></div>
-    <div class="colorpalette">
-        <div class="innercolorpalette palette1">
-            <div class="paletteheader">PlusOffice</div>
+    <div class="colorpalettecarousel">
+        <button onclick="paletteswitch(this)"><</button>
 
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FFFFFF"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #41484E"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #B33830"></div>
+        <div id="colorpalette" class="colorpalette">
+            <div class="innercolorpalette palette1">
+
+                <div class="paletteheader">PlusOffice</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FFFFFF"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #41484E"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #B33830"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette2">
+
+                <div class="paletteheader">Simple</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F64747"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E38D13"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #317931"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #00BFFF"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #0056FF"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6D3179"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E3136B"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FF7700"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F0B54E"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5CB85C"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #87CEFA"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #879EFA"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #A95CB8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F04E8A"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette3">
+
+                <div class="paletteheader">Grayscale</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #1A1A1A"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #404040"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #737373"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #999999"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #D9D9D9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FFFFFF"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette4">
+
+                <div class="paletteheader">Rainbow1</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e2cdcd"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1d2cd"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7ded7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9e5d9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7e6d7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d4d9ce"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ced9d1"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dde7eb"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d3dee8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1dbeb"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e0d3e8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebdbe1"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d88a8a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d89b8a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dfbea0"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e4d3a6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dfdda0"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #acbd96"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #96bd9f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #afd6e6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #96bfe4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bfa7e9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c696e4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9a7c0"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e23333"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e25a32"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e79c59"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #edc962"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7e159"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #85ab53"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #53ab68"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #73caee"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #44a0f4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9863f6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b144f4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f6639a"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8d2c26"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8c432e"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a26936"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ad8e34"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a29e36"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #586a42"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #426a4b"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3891b6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2a6ca8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #612eba"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #782aa8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ba2e63"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #532929"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #533329"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #604730"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #665830"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #605e30"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3a4230"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #304234"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #335b6b"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2a4762"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #452f6d"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4d2a62"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6d2f46"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette5">
+
+                <div class="paletteheader">Rainbow2</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cde2d9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cde1dd"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7e7e7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d9e4e9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7dfe7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ceced9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7ced9"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebdddf"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8d4d3"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebeadb"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e4e8d3"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dbebde"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8ad8b5"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8ad8c6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a0dddf"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a6d3e4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a0bedf"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9697bd"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b496bd"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e6afb8"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e49896"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9e3a7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7e496"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a7e9b2"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #33e293"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #32e2ba"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #59e4e7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #62c5ed"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #599fe7"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5355ab"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9853ab"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ee7387"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f44844"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f6e963"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7f444"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #63f67d"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2e8d62"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2e8c77"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #36a0a2"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #348aad"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #366ba2"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #42426a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #61426a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b6384c"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a82d2a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #baae2e"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #93a82a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2eba46"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #295340"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #29534a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #305f60"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #305666"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #304860"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #303042"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3e3042"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6b333c"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #622c2a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6d672f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #58622a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2f6d3a"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette6">
+
+                <div class="paletteheader">Hairtones</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #000000"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3e2b1a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #73502f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b9a897"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7c49d"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f5e0a4"></div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #404040"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #737373"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bfbfbf"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #78341f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a15d47"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c76e53"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette7">
+
+                <div class="paletteheader">Skintones 1</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #CB6151"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F07E6D"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E0A085"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E8A15F"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ECB079"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F0C094"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette8">
+
+                <div class="paletteheader">Skintones 2</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #773029"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8A4942"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #A46E60"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #916a46"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ae835b"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c29870"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette9">
+
+                <div class="paletteheader">Skintones 3</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #46120d"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4f1f1a"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5d3429"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #53361c"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #654324"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #7c4e22"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette10">
+
+                <div class="paletteheader">Skintones 4</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7c0bc"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8cfca"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e5d7d1"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e3d4c4"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8dbce"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ece2d8"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette11">
+
+                <div class="paletteheader">Skintones 5</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #954b3f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ce4a37"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bb704f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bf7836"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ca8241"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cf8e53"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette12">
+
+                <div class="paletteheader">Skintones 6</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4f0801"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #57160f"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #652d1e"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5c3511"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #704116"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8a4c10"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette13">
+
+                <div class="paletteheader">Skintones 7</div>
+
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ce9991"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7aea6"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e0c0b2"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1bd9c"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e6c8ad"></div>
+                <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebd3bd"></div>
+
+            </div>
+            <br>
+            <div class="innercolorpalette palette14">
+
+                <div class="paletteheader">Customizable</div>
+
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6a83aa">
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6aaa88">
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e25a32">
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#ecb079">
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
+
+            </div>
 
         </div>
-        <br>
-        <div class="innercolorpalette palette2">
-            <div class="paletteheader">Simple</div>
 
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F64747"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E38D13"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #317931"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #00BFFF"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #0056FF"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6D3179"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E3136B"></div>
-
-            +
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FF7700"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F0B54E"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5CB85C"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #87CEFA"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #879EFA"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #A95CB8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F04E8A"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette3">
-            <div class="paletteheader">Grayscale</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #1A1A1A"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #404040"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #737373"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #999999"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #D9D9D9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #FFFFFF"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette4">
-            <div class="paletteheader">Rainbow1</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e2cdcd"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1d2cd"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7ded7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9e5d9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7e6d7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d4d9ce"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ced9d1"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dde7eb"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d3dee8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1dbeb"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e0d3e8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebdbe1"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d88a8a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d89b8a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dfbea0"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e4d3a6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dfdda0"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #acbd96"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #96bd9f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #afd6e6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #96bfe4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bfa7e9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c696e4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9a7c0"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e23333"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e25a32"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e79c59"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #edc962"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7e159"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #85ab53"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #53ab68"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #73caee"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #44a0f4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9863f6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b144f4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f6639a"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8d2c26"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8c432e"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a26936"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ad8e34"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a29e36"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #586a42"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #426a4b"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3891b6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2a6ca8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #612eba"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #782aa8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ba2e63"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #532929"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #533329"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #604730"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #665830"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #605e30"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3a4230"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #304234"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #335b6b"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2a4762"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #452f6d"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4d2a62"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6d2f46"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette5">
-            <div class="paletteheader">Rainbow2</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cde2d9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cde1dd"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7e7e7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d9e4e9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7dfe7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ceced9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7ced9"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebdddf"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8d4d3"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebeadb"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e4e8d3"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #dbebde"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8ad8b5"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8ad8c6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a0dddf"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a6d3e4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a0bedf"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9697bd"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b496bd"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e6afb8"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e49896"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e9e3a7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7e496"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a7e9b2"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #33e293"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #32e2ba"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #59e4e7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #62c5ed"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #599fe7"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5355ab"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #9853ab"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ee7387"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f44844"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f6e963"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7f444"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #63f67d"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2e8d62"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2e8c77"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #36a0a2"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #348aad"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #366ba2"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #42426a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #61426a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b6384c"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a82d2a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #baae2e"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #93a82a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2eba46"></div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #295340"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #29534a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #305f60"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #305666"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #304860"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #303042"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3e3042"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6b333c"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #622c2a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #6d672f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #58622a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #2f6d3a"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette6">
-            <div class="paletteheader">Hairtones</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #000000"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #3e2b1a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #73502f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #b9a897"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7c49d"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #f5e0a4"></div>
-
-            +
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #404040"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #737373"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bfbfbf"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #78341f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #a15d47"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c76e53"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette7">
-            <div class="paletteheader">Skintones 1</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #CB6151"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F07E6D"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E0A085"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #E8A15F"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ECB079"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #F0C094"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette8">
-            <div class="paletteheader">Skintones 2</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #773029"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8A4942"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #A46E60"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #916a46"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ae835b"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #c29870"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette9">
-            <div class="paletteheader">Skintones 3</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #46120d"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4f1f1a"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5d3429"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #53361c"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #654324"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #7c4e22"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette10">
-            <div class="paletteheader">Skintones 4</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #d7c0bc"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8cfca"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e5d7d1"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e3d4c4"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e8dbce"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ece2d8"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette11">
-            <div class="paletteheader">Skintones 5</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #954b3f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ce4a37"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bb704f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #bf7836"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ca8241"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #cf8e53"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette12">
-            <div class="paletteheader">Skintones 6</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #4f0801"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #57160f"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #652d1e"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #5c3511"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #704116"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #8a4c10"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette13">
-            <div class="paletteheader">Skintones 7</div>
-
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ce9991"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e7aea6"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e0c0b2"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e1bd9c"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #e6c8ad"></div>
-            <div onclick="changingcolor(this)" class="colorchooser colordiv" style="background: #ebd3bd"></div>
-        </div>
-        <br>
-        <div class="innercolorpalette palette14">
-            <div class="paletteheader">Customizable</div>
-
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6a83aa">
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#6aaa88">
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e25a32">
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#ecb079">
-            <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
-        </div>
+        <button onclick="paletteswitch(this)">></button>
     </div>
+
     <div class="buttonholder">
         <button id="save" class="buttonius save" onclick="download()">save</button>
         <button class="buttonius redo" onClick="window.location.reload();">↺</button>

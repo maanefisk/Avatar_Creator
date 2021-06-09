@@ -131,28 +131,41 @@ input[type=color]::-webkit-color-swatch:hover {
   background: #c2a2af;
   font-size: 25px;
 }
-.bottom .colorpalette {
-  width: 550px;
+.bottom .colorpalettecarousel {
+  width: 700px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.bottom .colorpalettecarousel button {
+  width: 30px;
+  cursor: pointer;
+}
+.bottom .colorpalettecarousel .colorpalette {
+  width: 100%;
   border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.bottom .colorpalette .innercolorpalette {
+.bottom .colorpalettecarousel .colorpalette .innercolorpalette {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  display: none;
 }
-.bottom .colorpalette .innercolorpalette .paletteheader {
+.bottom .colorpalettecarousel .colorpalette .innercolorpalette .paletteheader {
   width: 100%;
   text-align: center;
 }
-.bottom .colorpalette .innercolorpalette .colorchooser {
+.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colorchooser {
   padding: 2px 2px;
 }
-.bottom .colorpalette .innercolorpalette .colordiv {
+.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colordiv {
   height: 40px;
   width: 40px;
   background: transparent;
@@ -162,8 +175,17 @@ input[type=color]::-webkit-color-swatch:hover {
   margin: 2px 2px;
   transition: 0.3s;
 }
-.bottom .colorpalette .innercolorpalette .colordiv:hover {
+.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colordiv:hover {
   transform: scale(1.2);
+}
+.bottom .colorpalettecarousel .colorpalette .palette2 {
+  width: 310px;
+}
+.bottom .colorpalettecarousel .colorpalette .palette4, .bottom .colorpalettecarousel .colorpalette .palette5 {
+  width: 530px !important;
+}
+.bottom .colorpalettecarousel .colorpalette .palette6 {
+  width: 265px;
 }
 .bottom .buttonholder {
   display: flex;

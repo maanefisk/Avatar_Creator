@@ -132,45 +132,69 @@ input[type="color"]::-webkit-color-swatch:hover {
     }
   }
 
-  .colorpalette {
-    width: 550px;
-    border: 1px solid red;
+  .colorpalettecarousel {
+    width: 700px;
+    border: 1px solid green;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 
-    .innercolorpalette {
+    button {
+      width: 30px;
+      cursor: pointer;
+    }
+
+    .colorpalette {
       width: 100%;
+      border: 1px solid red;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
 
-      .paletteheader {
+      .innercolorpalette {
         width: 100%;
-        text-align: center;
-      }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: none;
 
-      .colorchooser {
-        padding: 2px 2px;
-      }
-      .colordiv {
-        height: 40px;
-        width: 40px;
-        background: transparent;
-        border-radius: 50%;
-        cursor: pointer;
-        box-sizing: border-box;
-        margin: 2px 2px;
-        transition: 0.3s;
+        .paletteheader {
+          width: 100%;
+          text-align: center;
+        }
 
-        &:hover {
-          transform: scale(1.2);
+        .colorchooser {
+          padding: 2px 2px;
+        }
+        .colordiv {
+          height: 40px;
+          width: 40px;
+          background: transparent;
+          border-radius: 50%;
+          cursor: pointer;
+          box-sizing: border-box;
+          margin: 2px 2px;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
+      .palette2 {
+        width: 310px;
+      }
+      .palette4 , .palette5 {
+        width: 530px !important;
+      }
+      .palette6 {
+        width: 265px;
+      }
     }
-  }
 
+  }
 
   .buttonholder {
     display: flex;

@@ -17,6 +17,7 @@ const model = {
     mouth : '',
     bangs : '',
     background : '',
+    palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8","palette9","palette10","palette11","palette12","palette13","palette14"],
 };
 
 /*List items and their numbers*/
@@ -50,6 +51,9 @@ let lips = 11;
 let mouth = 6;
 let bangs = 7;
 let background = 1;
+
+let visiblepalette = model.palettes[0];
+let chosenpalette = document.getElementsByClassName(visiblepalette);
 
 function removepreviousStyle() {
     let savedelement = document.getElementById(model[categoryathand]);
@@ -124,6 +128,7 @@ function changingcolor(thecolorpicker) {
 }
 
 function generateview() {
+    /*Make menu of categories*/
     let column2 = document.getElementById("column2");
 
     for (i = 0; i < categories.length; i++) {
@@ -137,6 +142,9 @@ function generateview() {
     }
 
     column2.innerHTML += textofcategories;
+
+    /*Make palette1 appear*/
+    chosenpalette[0].style.display = "flex";
 }
 
 function generatenumbersview(activeone) {
@@ -150,6 +158,26 @@ function generatenumbersview(activeone) {
     }
 
     numbersholder.innerHTML = textofnumbers;
+}
+
+function paletteswitch(butt) {
+    let activenow = '';
+
+    if (visiblepalette == 'palette14' && butt.innerText == '>' || visiblepalette == 'palette1' && butt.innerText == '<') {
+        return;
+    } else {
+        for (j = 0; j < model.palettes.length; j++) {
+            chosenpalette[0].style.display = "none";
+            if (visiblepalette == model.palettes[j]) {
+                if (butt.innerText == '>') {
+                    activenow = model.palettes[j+1];
+                } else {activenow = model.palettes[j-1];}
+            }
+        }
+        visiblepalette = activenow;
+        chosenpalette = document.getElementsByClassName(visiblepalette);
+        chosenpalette[0].style.display = "flex";
+    }
 }
 
 function download() {
