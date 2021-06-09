@@ -17,7 +17,7 @@ const model = {
     mouth : '',
     bangs : '',
     background : '',
-    palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8","palette9","palette10","palette11","palette12","palette13","palette14"],
+    palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8"],
 };
 
 /*List items and their numbers*/
@@ -107,24 +107,34 @@ function thenumber(chosennumber) {
 
     chosenelement = elementathand;
 }
+/*Changes color of hair of chosen category*/
 function changingcolor(thecolorpicker) {
-    let chosenelementinner = chosenelement.children;
     let o = 0;
 
+    /*Gives the background if the colorchooser is DIV/Not customizable*/
     if (thecolorpicker.value == undefined) {
         chosenelement.style.fill = thecolorpicker.style.background;
-    } else {
+    }
+    /*Gives the background if the colorchooser is INPUT/Customizable*/
+    else {
         chosenelement.style.fill = thecolorpicker.value;
     }
 
-    if (chosenelement.children.length != 0) {
-        for (o = 0; o < chosenelement.children.length; o++) {
-            chosenelementinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
-            chosenelementinner[0].setAttribute('style', 'filter: brightness(0.85);')
+    /*Makes all other elements in category change to the color you've chosen*/
+    for (x = 1; x <= eval(activecategory); x++) {
+        let allincategory = document.getElementById(activecategory+x);
+        allincategory.style.fill = chosenelement.style.fill;
+        let allincategoryinner = allincategory.children;
+        /*If element contains more parts, it gives a lighter color to other parts to make it look prettier*/
+        if (allincategory.children.length != 0) {
+            for (o = 0; o < allincategory.children.length; o++) {
+                allincategoryinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
+                allincategoryinner[0].setAttribute('style', 'filter: brightness(0.85);')
+            }
         }
     }
 
-    /*console.log(chosenelementinner.children.length);*/
+    /*console.log(chosenelement.children.length);*/
 }
 
 function generateview() {
@@ -163,7 +173,7 @@ function generatenumbersview(activeone) {
 function paletteswitch(butt) {
     let activenow = '';
 
-    if (visiblepalette == 'palette14' && butt.innerText == '❯' || visiblepalette == 'palette1' && butt.innerText == '❮') {
+    if (visiblepalette == 'palette8' && butt.innerText == '❯' || visiblepalette == 'palette1' && butt.innerText == '❮') {
         return;
     } else {
         for (j = 0; j < model.palettes.length; j++) {

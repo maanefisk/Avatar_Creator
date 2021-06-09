@@ -194,6 +194,9 @@ input[type=color]::-webkit-color-swatch:hover {
 .bottom .colorpalettecarousel .colorpalette .palette6 {
   width: 265px;
 }
+.bottom .colorpalettecarousel .colorpalette .palette7 {
+  width: 530px;
+}
 .bottom .buttonholder {
   display: flex;
   flex-direction: row;
