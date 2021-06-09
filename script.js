@@ -114,13 +114,8 @@ function changingcolor(thecolorpicker) {
         document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value;
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
-        if (thecolorpicker.value == undefined) {
-            chosenelement.style.fill = thecolorpicker.style.background;
-        }
+        chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value;
         /*Gives the background if the colorchooser is INPUT/Customizable*/
-        else {
-            chosenelement.style.fill = thecolorpicker.value;
-        }
 
         /*Makes all other elements in category change to the color you've chosen*/
         for (x = 1; x <= eval(activecategory); x++) {
