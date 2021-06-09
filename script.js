@@ -163,13 +163,13 @@ function generatenumbersview(activeone) {
 function paletteswitch(butt) {
     let activenow = '';
 
-    if (visiblepalette == 'palette14' && butt.innerText == '>' || visiblepalette == 'palette1' && butt.innerText == '<') {
+    if (visiblepalette == 'palette14' && butt.innerText == '❯' || visiblepalette == 'palette1' && butt.innerText == '❮') {
         return;
     } else {
         for (j = 0; j < model.palettes.length; j++) {
             chosenpalette[0].style.display = "none";
             if (visiblepalette == model.palettes[j]) {
-                if (butt.innerText == '>') {
+                if (butt.innerText == '❯') {
                     activenow = model.palettes[j+1];
                 } else {activenow = model.palettes[j-1];}
             }
