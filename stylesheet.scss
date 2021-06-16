@@ -124,7 +124,7 @@ input[type="color"]::-webkit-color-swatch:hover {
     transition: font-size 0.1s;
     border: 1px solid black;
     width: 100%;
-    animation: appear 0.3s ease-in-out;
+    animation: appear 0.6s ease-in-out;
     &:focus {
       border: 3px solid red;
     }
@@ -171,6 +171,7 @@ input[type="color"]::-webkit-color-swatch:hover {
         flex-wrap: wrap;
         justify-content: center;
         display: none;
+        animation: appear 0.6s ease-in forwards;
 
         .paletteheader {
           width: 100%;
