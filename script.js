@@ -206,30 +206,51 @@ function generatenumbersview(activeone) {
 
     numbersholder.innerHTML = textofnumbers;
 }
-
+let activenow;
 function paletteswitch(butt) {
-    let activenow = '';
+    for (j = 0; j < model.palettes.length; j++) {
+        chosenpalette[0].style.display = "none";
+        if (visiblepalette == model.palettes[j]) {
 
-    if (visiblepalette == 'palette8' && butt.innerText == '❯' || visiblepalette == 'palette1' && butt.innerText == '❮') {
-        return;
-    } else {
-        for (j = 0; j < model.palettes.length; j++) {
-            chosenpalette[0].style.display = "none";
-            if (visiblepalette == model.palettes[j]) {
-                if (butt.innerText == '❯') {
-                    activenow = model.palettes[j+1];
-                } else {activenow = model.palettes[j-1];}
+            if (butt.innerText == '❯' && activenow != 'palette8') {
+                activenow = model.palettes[j+1];
+            }
+            else if (butt.innerText == '❯' && activenow == 'palette8') {
+                activenow = model.palettes[0];
+            }
+            if (activenow == null) {
+                activenow = 'palette1'
+            }
+            if (butt.innerText == '❮' && activenow != 'palette1') {
+                activenow = model.palettes[j-1];
+            }
+            else if (butt.innerText == '❮' && activenow == 'palette1') {
+                activenow = model.palettes[7];
             }
         }
-        visiblepalette = activenow;
-        chosenpalette = document.getElementsByClassName(visiblepalette);
-        chosenpalette[0].style.display = "flex";
     }
+    visiblepalette = activenow;
+    chosenpalette = document.getElementsByClassName(visiblepalette);
+    chosenpalette[0].style.display = "flex";
 }
 
 function download() {
     let svg = document.getElementById('avatar').outerHTML;
     console.log(svg);
+
+    /*const filename = 'avatar.svg';
+    let svgData = svg;
+    var svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"});
+    if (window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveBlob(blob, filename);
+    } else {
+        var elem = window.document.createElement('a');
+        elem.href = window.URL.createObjectURL(svgBlob);
+        elem.download = filename;
+        document.body.appendChild(elem);
+        elem.click();
+        document.body.removeChild(elem);
+    }*/
 }
 
 
