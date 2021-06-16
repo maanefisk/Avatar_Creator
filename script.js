@@ -182,10 +182,10 @@ function generateview() {
     for (i = 0; i < categories.length; i++) {
         chosencategory = categories[i];
 
-        textofcategories += "<div id=\""
+        textofcategories += "<button id=\""
             +chosencategory+
             "\" class=\"menutext\" onClick=\"category(this)\">"
-            +chosencategory +"</div>";
+            +chosencategory +"</button>";
     }
 
     column2.innerHTML += textofcategories;
@@ -212,10 +212,10 @@ function paletteswitch(butt) {
         chosenpalette[0].style.display = "none";
         if (visiblepalette == model.palettes[j]) {
 
-            if (butt.innerText == '❯' && activenow != 'palette8') {
+            if (butt.innerText == '❯' && activenow != 'palette'+model.palettes.length) {
                 activenow = model.palettes[j+1];
             }
-            else if (butt.innerText == '❯' && activenow == 'palette8') {
+            else if (butt.innerText == '❯' && activenow == 'palette'+model.palettes.length) {
                 activenow = model.palettes[0];
             }
             if (activenow == null) {
@@ -225,7 +225,7 @@ function paletteswitch(butt) {
                 activenow = model.palettes[j-1];
             }
             else if (butt.innerText == '❮' && activenow == 'palette1') {
-                activenow = model.palettes[7];
+                activenow = model.palettes[(model.palettes.length-1)];
             }
         }
     }

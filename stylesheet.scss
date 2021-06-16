@@ -73,6 +73,7 @@ input[type="color"]::-webkit-color-swatch:hover {
   -webkit-justify-content: space-between;
 
   .menutext {
+    background: black;
     color: white;
     font-family: Roboto, sans-serif;
     font-size: 20px;
@@ -88,6 +89,9 @@ input[type="color"]::-webkit-color-swatch:hover {
       background: #6a83aa;
       cursor: pointer;
       font-size: 25px;
+    }
+    &:focus {
+      border: 3px solid red;
     }
   }
 
