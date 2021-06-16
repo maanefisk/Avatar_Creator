@@ -1,17 +1,17 @@
 /*Here is all categories stored, counter is stored and which chosen element is stored*/
 const model = {
-    categories: ["hair","neck","head","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","bangs","background"],
+    categories: ["hair","bangs","head","neck","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","background"],
     hair : '',
-    neck : '',
-    head : '',
-    ears : '',
+    neck : 'neck1',
+    head : 'head1',
+    ears : 'ears1',
     shirt : '',
-    eyelids : '',
+    eyelids : 'eyelids1',
     eyes : '',
     iris : '',
     pupils : '',
     brows : '',
-    nose : '',
+    nose : 'nose1',
     lips : '',
     mouth : '',
     bangs : '',
@@ -122,13 +122,57 @@ function changingcolor(thecolorpicker) {
             /*If element contains more parts, it gives a lighter color to other parts to make it look prettier*/
             if (allincategory.children.length != 0) {
                 for (o = 0; o < allincategory.children.length; o++) {
-                    allincategoryinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';')
-                    allincategoryinner[0].setAttribute('style', 'filter: brightness(0.85);')
+                    allincategoryinner[o].setAttribute('style', 'fill:'+ thecolorpicker.value +';');
+                    allincategoryinner[0].setAttribute('style', 'filter: brightness(0.85);');
                 }
             }
         }
     }
     /*console.log(chosenelement.children.length);*/
+
+    /*If categoriy is head, then all the other skinobjects get the same color generated*/
+    /*Lets do bangs to hair do the same*/
+    let allneck;
+    let allears;
+    let alleyelids;
+    let allnose;
+    let allbangs;
+
+    if (activecategory == 'head') {
+        for (n = 1; n <= neck; n++) {
+            allneck = document.getElementById('neck'+n);
+            allneck.style.fill = chosenelement.style.fill;
+            allneck.style.filter = 'brightness(85%)';
+        }
+        for (e = 1; e <= ears; e++) {
+            allears = document.getElementById('ears'+e);
+            allears.style.fill = chosenelement.style.fill;
+        }
+        for (ey = 1; ey <= eyelids; ey++) {
+            alleyelids = document.getElementById('eyelids'+ey);
+            alleyelids.style.fill = chosenelement.style.fill;
+            alleyelids.style.filter = 'brightness(115%)';
+        }
+        for (nos = 1; nos <= nose; nos++) {
+            allnose = document.getElementById('nose'+nos);
+            allnose.style.fill = chosenelement.style.fill;
+            allnose.style.filter = 'brightness(115%)';
+        }
+
+    }
+    else if (activecategory == 'hair') {
+        for (ba = 1; ba <= bangs; ba++) {
+            allbangs = document.getElementById('bangs'+ba);
+            allbangs.style.fill = chosenelement.style.fill;
+            allbangs.style.filter = 'brightness(115%)';
+        }
+    }
+    else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs') {
+        for (ac = 1; ac <= eval(activecategory); ac++) {
+            let skinobject = document.getElementById(activecategory+ac);
+            skinobject.style.filter = 'none';
+        }
+    }
 }
 
 function generateview() {
