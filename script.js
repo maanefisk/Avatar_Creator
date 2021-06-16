@@ -1,6 +1,6 @@
 /*Here is all categories stored, counter is stored and which chosen element is stored*/
 const model = {
-    categories: ["hair","bangs","head","neck","ears","shirt","eyelids","eyes","iris","pupils","brows","nose","lips","mouth","background"],
+    categories: ["hair","bangs","head","neck","ears","eyes","eyelids","iris","pupils","brows","nose","lips","mouth","shirt","background"],
     hair : '',
     neck : 'neck1',
     head : 'head1',
