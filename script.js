@@ -151,7 +151,7 @@ function changingcolor(thecolorpicker) {
         for (ey = 1; ey <= eyelids; ey++) {
             alleyelids = document.getElementById('eyelids'+ey);
             alleyelids.style.fill = chosenelement.style.fill;
-            alleyelids.style.filter = 'brightness(115%)';
+            alleyelids.style.filter = 'brightness(85%)';
         }
         for (nos = 1; nos <= nose; nos++) {
             allnose = document.getElementById('nose'+nos);
@@ -164,7 +164,7 @@ function changingcolor(thecolorpicker) {
         for (ba = 1; ba <= bangs; ba++) {
             allbangs = document.getElementById('bangs'+ba);
             allbangs.style.fill = chosenelement.style.fill;
-            allbangs.style.filter = 'brightness(115%)';
+            allbangs.style.filter = 'brightness(110%)';
         }
     }
     else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs') {
