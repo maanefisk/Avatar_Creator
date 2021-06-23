@@ -31,6 +31,8 @@ let numberathand;
 let chosenelement = '';
 let defaultitem = '';
 let defaultbox;
+let visiblepalette = model.palettes[0];
+let chosenpalette = document.getElementsByClassName(visiblepalette);
 
 /*How many elements inside each category:*/
 let hair = 12;
@@ -48,9 +50,6 @@ let lips = 11;
 let mouth = 6;
 let bangs = 7;
 let background = 1;
-
-let visiblepalette = model.palettes[0];
-let chosenpalette = document.getElementsByClassName(visiblepalette);
 
 function removepreviousStyle() {
     let savedelement = document.getElementById(model[categoryathand]);
@@ -84,6 +83,14 @@ function category(chosencategory) {
         chosenelement.classList.add('show');
     }
     model[categoryathand] = defaultbox;
+
+    /*positionslider shows up for categories that support it:*/
+    let slidecontainer = document.getElementById('slidecontainer');
+    let slider = document.getElementById('positionslider');
+    if (activecategory == 'hair'|| activecategory == 'ears'|| activecategory == 'nose'|| activecategory =='mouth'|| activecategory == 'lips'|| activecategory == 'brows') {
+        slider.value = 0;
+        slidecontainer.style.display = 'block';
+    } else {slidecontainer.style.display = 'none';}
 }
 
 function thenumber(chosennumber) {
@@ -171,6 +178,16 @@ function changingcolor(thecolorpicker) {
         for (ac = 1; ac <= eval(activecategory); ac++) {
             let skinobject = document.getElementById(activecategory+ac);
             skinobject.style.filter = 'none';
+        }
+    }
+}
+/*Enables positioning for certain elements with slider*/
+function positionelement(slider) {
+    if (activecategory == 'hair'|| activecategory == 'ears'|| activecategory == 'nose'|| activecategory =='mouth'|| activecategory == 'lips' || activecategory == 'brows') {
+        for (x = 1; x <= eval(activecategory); x++) {
+            let allincategory = document.getElementById(activecategory+x);
+            let parentofall = allincategory.parentElement;
+            parentofall.style.transform = 'translateY('+ slider.value +'px)';
         }
     }
 }
