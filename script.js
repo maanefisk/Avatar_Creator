@@ -33,6 +33,7 @@ let defaultitem = '';
 let defaultbox;
 let visiblepalette = model.palettes[0];
 let chosenpalette = document.getElementsByClassName(visiblepalette);
+let activenow;
 
 /*How many elements inside each category:*/
 let hair = 12;
@@ -91,6 +92,24 @@ function category(chosencategory) {
         slider.value = 0;
         slidecontainer.style.display = 'block';
     } else {slidecontainer.style.display = 'none';}
+
+    /*The right colorpalette or none*/
+    if (activecategory == 'hair'||activecategory == 'brows') {
+        activenow = 'palette6';
+        paletteswitch();
+    }
+    if (activecategory == 'head'||activecategory == 'mouth'||activecategory == 'lips') {
+        activenow = 'palette7';
+        paletteswitch();
+    }
+    if (activecategory == 'iris') {
+        activenow = 'palette4';
+        paletteswitch();
+    }
+    let paletteholder = document.getElementById('colorpaletteholder');
+    if (activecategory == 'eyes') {
+        paletteholder.style.display = 'none';
+    } else {paletteholder.style.display = 'flex';}
 }
 
 function thenumber(chosennumber) {
@@ -111,7 +130,7 @@ function thenumber(chosennumber) {
 
     chosenelement = elementathand;
 }
-/*Changes color of hair of chosen category*/
+/*Changes color of chosen category*/
 function changingcolor(thecolorpicker) {
     let o = 0;
     if (chosenelement == '') {
@@ -173,6 +192,10 @@ function changingcolor(thecolorpicker) {
             allbangs.style.fill = chosenelement.style.fill;
             allbangs.style.filter = 'brightness(110%)';
         }
+        for (bro = 1; bro <= brows; bro++) {
+            allbrows = document.getElementById('brows'+bro);
+            allbrows.style.fill = chosenelement.style.fill;
+        }
     }
     else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs') {
         for (ac = 1; ac <= eval(activecategory); ac++) {
@@ -223,26 +246,27 @@ function generatenumbersview(activeone) {
 
     numbersholder.innerHTML = textofnumbers;
 }
-let activenow;
-function paletteswitch(butt) {
-    for (j = 0; j < model.palettes.length; j++) {
-        chosenpalette[0].style.display = "none";
-        if (visiblepalette == model.palettes[j]) {
 
-            if (butt.innerText == '❯' && activenow != 'palette'+model.palettes.length) {
-                activenow = model.palettes[j+1];
-            }
-            else if (butt.innerText == '❯' && activenow == 'palette'+model.palettes.length) {
-                activenow = model.palettes[0];
-            }
-            if (activenow == null) {
-                activenow = 'palette1'
-            }
-            if (butt.innerText == '❮' && activenow != 'palette1') {
-                activenow = model.palettes[j-1];
-            }
-            else if (butt.innerText == '❮' && activenow == 'palette1') {
-                activenow = model.palettes[(model.palettes.length-1)];
+function paletteswitch(butt) {
+    chosenpalette[0].style.display = "none";
+    if (typeof butt != 'undefined') {
+        for (j = 0; j < model.palettes.length; j++) {
+            if (visiblepalette == model.palettes[j]) {
+                if (butt.innerText == '❯' && activenow != 'palette'+model.palettes.length) {
+                    activenow = model.palettes[j+1];
+                }
+                else if (butt.innerText == '❯' && activenow == 'palette'+model.palettes.length) {
+                    activenow = model.palettes[0];
+                }
+                if (activenow == null) {
+                    activenow = 'palette1'
+                }
+                if (butt.innerText == '❮' && activenow != 'palette1') {
+                    activenow = model.palettes[j-1];
+                }
+                else if (butt.innerText == '❮' && activenow == 'palette1') {
+                    activenow = model.palettes[(model.palettes.length-1)];
+                }
             }
         }
     }

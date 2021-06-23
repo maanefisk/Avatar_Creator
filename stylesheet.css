@@ -188,13 +188,13 @@ input[type=color]::-webkit-color-swatch:hover {
   background: #c2a2af;
   font-size: 25px;
 }
-.bottom .colorpalettecarousel {
+.bottom .colorpaletteholder {
   width: 700px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.bottom .colorpalettecarousel button {
+.bottom .colorpaletteholder button {
   width: 30px;
   height: 75px;
   cursor: pointer;
@@ -203,11 +203,11 @@ input[type=color]::-webkit-color-swatch:hover {
   background: transparent;
   transition: 0.3s;
 }
-.bottom .colorpalettecarousel button:hover {
+.bottom .colorpaletteholder button:hover {
   color: #6a83aa;
   transform: scale(1.2);
 }
-.bottom .colorpalettecarousel .colorpalette {
+.bottom .colorpaletteholder .colorpalette {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -215,7 +215,7 @@ input[type=color]::-webkit-color-swatch:hover {
   align-items: center;
   padding: 15px 0;
 }
-.bottom .colorpalettecarousel .colorpalette .innercolorpalette {
+.bottom .colorpaletteholder .colorpalette .innercolorpalette {
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
@@ -223,14 +223,14 @@ input[type=color]::-webkit-color-swatch:hover {
   display: none;
   animation: appear 0.6s ease-in forwards;
 }
-.bottom .colorpalettecarousel .colorpalette .innercolorpalette .paletteheader {
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .paletteheader {
   width: 100%;
   text-align: center;
 }
-.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colorchooser {
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .colorchooser {
   padding: 2px 2px;
 }
-.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colordiv {
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .colordiv {
   height: 40px;
   width: 40px;
   background: transparent;
@@ -240,19 +240,19 @@ input[type=color]::-webkit-color-swatch:hover {
   margin: 2px 2px;
   transition: 0.3s;
 }
-.bottom .colorpalettecarousel .colorpalette .innercolorpalette .colordiv:hover {
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .colordiv:hover {
   transform: scale(1.2);
 }
-.bottom .colorpalettecarousel .colorpalette .palette2 {
+.bottom .colorpaletteholder .colorpalette .palette2 {
   width: 310px;
 }
-.bottom .colorpalettecarousel .colorpalette .palette4, .bottom .colorpalettecarousel .colorpalette .palette5 {
+.bottom .colorpaletteholder .colorpalette .palette4, .bottom .colorpaletteholder .colorpalette .palette5 {
   width: 530px !important;
 }
-.bottom .colorpalettecarousel .colorpalette .palette6 {
+.bottom .colorpaletteholder .colorpalette .palette6 {
   width: 265px;
 }
-.bottom .colorpalettecarousel .colorpalette .palette7 {
+.bottom .colorpaletteholder .colorpalette .palette7 {
   width: 530px;
 }
 .bottom .buttonholder {
