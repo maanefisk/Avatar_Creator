@@ -98,7 +98,7 @@ function category(chosencategory) {
         activenow = 'palette6';
         paletteswitch();
     }
-    if (activecategory == 'head'||activecategory == 'mouth'||activecategory == 'lips') {
+    if (activecategory == 'head'||activecategory == 'mouth'||activecategory == 'lips'||activecategory == 'ears'||activecategory == 'neck'||activecategory == 'eyelids'||activecategory == 'nose') {
         activenow = 'palette7';
         paletteswitch();
     }
