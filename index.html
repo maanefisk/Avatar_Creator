@@ -596,6 +596,30 @@
                 <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
 
             </div>
+            <div class="innercolorpalette palette9">
+
+                <div class="paletteheader">Gradients</div>
+
+                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
+
+                <svg width="88" height="44" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stop-color="red"/>
+                            <stop offset="50%" stop-color="black" stop-opacity="0"/>
+                            <stop offset="100%" stop-color="blue"/>
+                        </linearGradient>
+                        <linearGradient id="my-cool-gradient" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#447799" />
+                            <stop offset="50%" stop-color="#224488" />
+                            <stop offset="100%" stop-color="#112266" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="22" cy="22" r="22" fill="url(#Gradient2)" />
+                    <circle cx="66" cy="22" r="22" fill="url(#my-cool-gradient)" />
+                </svg>
+
+            </div>
 
         </div>
 

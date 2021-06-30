@@ -16,7 +16,7 @@ const model = {
     mouth : '',
     bangs : '',
     background : '',
-    palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8"],
+    palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8","palette9"],
 };
 
 /*List items and their numbers*/
