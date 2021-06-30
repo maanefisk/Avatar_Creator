@@ -163,6 +163,8 @@ function changingcolor(thecolorpicker) {
     let alleyelids;
     let allnose;
     let allbangs;
+    let allmouth;
+    let alllips;
 
     if (activecategory == 'head') {
         for (n = 1; n <= neck; n++) {
@@ -180,6 +182,22 @@ function changingcolor(thecolorpicker) {
             alleyelids.style.filter = 'brightness(89%) saturate(110%) contrast(110%)';
             if (alleyelids.style.fill == 'rgb(0, 0, 0)') {
                 alleyelids.style.fill = 'rgb(48,48,48)';
+            }
+        }
+        for (mou = 1; mou <= mouth; mou++) {
+            allmouth = document.getElementById('mouth'+mou);
+            allmouth.style.fill = chosenelement.style.fill;
+            allmouth.style.filter = 'brightness(60%) saturate(110%) contrast(110%)';
+            if (allmouth.style.fill == 'rgb(0, 0, 0)') {
+                allmouth.style.fill = 'rgb(48,48,48)';
+            }
+        }
+        for (lip = 1; lip <= lips; lip++) {
+            alllips = document.getElementById('lips'+lip);
+            alllips.style.fill = chosenelement.style.fill;
+            alllips.style.filter = 'brightness(90%) saturate(110%) contrast(110%)';
+            if (alllips.style.fill == 'rgb(0, 0, 0)') {
+                alllips.style.fill = 'rgb(48,48,48)';
             }
         }
         for (nos = 1; nos <= nose; nos++) {
@@ -211,7 +229,7 @@ function changingcolor(thecolorpicker) {
         for (ba = 1; ba <= bangs; ba++) {
             allbangs = document.getElementById('bangs'+ba);
             allbangs.style.fill = chosenelement.style.fill;
-            
+
             if (allbangs.style.fill.length <=15 ) {
                 allbangs.style.filter = 'brightness(118%) contrast(95%)';
             }
@@ -236,7 +254,7 @@ function changingcolor(thecolorpicker) {
             allbrows.style.fill = chosenelement.style.fill;
         }
     }
-    else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs') {
+    else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs'|| activecategory == 'mouth'|| activecategory == 'lips') {
         for (ac = 1; ac <= eval(activecategory); ac++) {
             let skinobject = document.getElementById(activecategory+ac);
             skinobject.style.filter = 'none';
