@@ -88,7 +88,7 @@ function category(chosencategory) {
     /*positionslider shows up for categories that support it:*/
     let slidecontainer = document.getElementById('slidecontainer');
     let slider = document.getElementById('positionslider');
-    if (activecategory == 'hair'|| activecategory == 'ears'|| activecategory == 'nose'|| activecategory =='mouth'|| activecategory == 'lips'|| activecategory == 'brows') {
+    if (activecategory == 'hair' || activecategory == 'ears' || activecategory == 'eyelids' || activecategory == 'nose' || activecategory =='mouth' || activecategory == 'lips' || activecategory == 'brows') {
         slider.value = 0;
         slidecontainer.style.display = 'block';
     } else {slidecontainer.style.display = 'none';}
@@ -263,11 +263,16 @@ function changingcolor(thecolorpicker) {
 }
 /*Enables positioning for certain elements with slider*/
 function positionelement(slider) {
-    if (activecategory == 'hair'|| activecategory == 'ears'|| activecategory == 'nose'|| activecategory =='mouth'|| activecategory == 'lips' || activecategory == 'brows') {
+    if (activecategory == 'hair' || activecategory == 'ears' || activecategory == 'eyelids' || activecategory == 'nose' || activecategory =='mouth' || activecategory == 'lips' || activecategory == 'brows') {
         for (x = 1; x <= eval(activecategory); x++) {
             let allincategory = document.getElementById(activecategory+x);
             let parentofall = allincategory.parentElement;
-            parentofall.style.transform = 'translateY('+ slider.value +'px)';
+            if (activecategory == 'eyelids') {
+                parentofall.style.transform = 'translateY('+ (slider.value/2) +'px)';
+            } else {
+                parentofall.style.transform = 'translateY('+ slider.value +'px)';
+            }
+
         }
     }
 }
@@ -301,7 +306,17 @@ function generatenumbersview(activeone) {
         textofnumbers += "<button id=\"number"+n+"\" class=\"number\" onclick=\"thenumber(this)\">"+n+"</button>";
     }
 
+    if (activeone == 'hair' || activeone == 'bangs' || activeone == 'ears' || activeone == 'eyes' || activeone == 'eyelids' || activeone == 'iris' || activeone == 'pupils' || activeone == 'brows' || activeone == 'nose' || activeone == 'lips' || activeone == 'mouth') {
+        textofnumbers += "<button id=\"xout"+n+"\" class=\"number\" onclick=\"removestyle()\">"+'╳'+"</button>";
+    }
+
+
     numbersholder.innerHTML = textofnumbers;
+}
+
+function removestyle() {
+    chosenelement.classList.remove('show');
+    chosenelement.classList.add('bydefault');
 }
 
 function paletteswitch(butt) {
