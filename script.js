@@ -168,7 +168,7 @@ function changingcolor(thecolorpicker) {
         for (n = 1; n <= neck; n++) {
             allneck = document.getElementById('neck'+n);
             allneck.style.fill = chosenelement.style.fill;
-            allneck.style.filter = 'brightness(85%)';
+            allneck.style.filter = 'brightness(89%) saturate(110%) contrast(110%)';
         }
         for (e = 1; e <= ears; e++) {
             allears = document.getElementById('ears'+e);
@@ -177,12 +177,33 @@ function changingcolor(thecolorpicker) {
         for (ey = 1; ey <= eyelids; ey++) {
             alleyelids = document.getElementById('eyelids'+ey);
             alleyelids.style.fill = chosenelement.style.fill;
-            alleyelids.style.filter = 'brightness(85%)';
+            alleyelids.style.filter = 'brightness(89%) saturate(110%) contrast(110%)';
+            if (alleyelids.style.fill == 'rgb(0, 0, 0)') {
+                alleyelids.style.fill = 'rgb(48,48,48)';
+            }
         }
         for (nos = 1; nos <= nose; nos++) {
             allnose = document.getElementById('nose'+nos);
             allnose.style.fill = chosenelement.style.fill;
-            allnose.style.filter = 'brightness(115%)';
+
+            if (allnose.style.fill.length <=15 ) {
+                allnose.style.filter = 'brightness(118%) contrast(95%)';
+            }
+            else if (allnose.style.fill.length ==16) {
+                allnose.style.filter = 'brightness(115%) contrast(98%)';
+            }
+            else if (allnose.style.fill.length ==17) {
+                allnose.style.filter = 'brightness(110%)';
+            }
+            else {
+                allnose.style.filter = 'brightness(105%)';
+            }
+            if (allnose.style.fill == 'rgb(0, 0, 0)') {
+                allnose.style.fill = 'rgb(29,29,29)';
+            }
+            if (allnose.style.fill == 'rgb(255, 255, 255)') {
+                allnose.style.fill = 'rgb(227,227,227)';
+            }
         }
 
     }
@@ -190,7 +211,25 @@ function changingcolor(thecolorpicker) {
         for (ba = 1; ba <= bangs; ba++) {
             allbangs = document.getElementById('bangs'+ba);
             allbangs.style.fill = chosenelement.style.fill;
-            allbangs.style.filter = 'brightness(110%)';
+            
+            if (allbangs.style.fill.length <=15 ) {
+                allbangs.style.filter = 'brightness(118%) contrast(95%)';
+            }
+            else if (allbangs.style.fill.length ==16) {
+                allbangs.style.filter = 'brightness(115%) contrast(98%)';
+            }
+            else if (allbangs.style.fill.length ==17) {
+                allbangs.style.filter = 'brightness(110%)';
+            }
+            else {
+                allbangs.style.filter = 'brightness(105%)';
+            }
+            if (allbangs.style.fill == 'rgb(0, 0, 0)') {
+                allbangs.style.fill = 'rgb(29,29,29)';
+            }
+            if (allbangs.style.fill == 'rgb(255, 255, 255)') {
+                allbangs.style.fill = 'rgb(227,227,227)';
+            }
         }
         for (bro = 1; bro <= brows; bro++) {
             allbrows = document.getElementById('brows'+bro);
