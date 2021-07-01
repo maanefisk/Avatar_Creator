@@ -227,6 +227,12 @@ input[type=color]::-webkit-color-swatch:hover {
   width: 100%;
   text-align: center;
 }
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .paletteheader2 {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 90%;
+}
 .bottom .colorpaletteholder .colorpalette .innercolorpalette .colorchooser {
   padding: 2px 2px;
 }

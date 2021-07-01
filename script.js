@@ -296,6 +296,7 @@ function generateview() {
     /*Make palette1 appear*/
     chosenpalette[0].style.display = "flex";
     generategradientssview();
+    genratedefs();
 }
 
 function generatenumbersview(activeone) {
@@ -330,12 +331,12 @@ function generategradientssview(activecategorynowforgradient) {
 
         if (activecategorynowforgradient == model.categories[catego]) {
 
-            textofpalette9 += '<div class=\"paletteheader\">Gradients '+gradientcategory+'</div>\n' +
-                '\n' +
+            textofpalette9 += '<div class=\"paletteheader\">Gradient '+gradientcategory+'</div>\n' +
+                '\n' + '<div class=\"paletteheader2\">Velg gradient farger:</div>' +
                 '                <input type=\"color\" class=\"gradientcolor1\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#73caee\">\n' +
                 '                <input type=\"color\" class=\"gradientcolor2\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#f6639a\">\n' +
-                '                <input type=\"color\" class=\"gradientcolor3\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#d7f444\">\n' +
-                '\n' +
+                '                <input type=\"color\" class=\"gradientcolor3\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#e25a32\">\n' +
+                '\n' + '<div class=\"paletteheader2\">Velg gradient type:</div>' +
                 '                <div style=\"width: 100%; display: flex; justify-content: center;\">\n' +
                 '                    <svg width=\"220\" height=\"44\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" pointer-events=\"none\">\n' +
                 '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"22\" cy=\"22\" r=\"22\" fill=\"url(#gradient1'+activecategory+')\"/>\n' +
