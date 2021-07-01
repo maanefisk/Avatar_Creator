@@ -62,6 +62,7 @@ function category(chosencategory) {
     activecategory = chosencategory.innerText.toLowerCase();
     categoryathand = activecategory;
     generatenumbersview(activecategory);
+    generategradientssview(activecategory);
 
     if (model[categoryathand] == '') {
         defaultbox = categoryathand + '1';
@@ -134,10 +135,10 @@ function thenumber(chosennumber) {
 function changingcolor(thecolorpicker) {
     let o = 0;
     if (chosenelement == '') {
-        document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value;
+        document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
-        chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value;
+        chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
         /*Gives the background if the colorchooser is INPUT/Customizable*/
 
         /*Makes all other elements in category change to the color you've chosen*/
@@ -294,6 +295,7 @@ function generateview() {
 
     /*Make palette1 appear*/
     chosenpalette[0].style.display = "flex";
+    generategradientssview();
 }
 
 function generatenumbersview(activeone) {
@@ -310,8 +312,42 @@ function generatenumbersview(activeone) {
         textofnumbers += "<button id=\"xout"+n+"\" class=\"number\" onclick=\"removestyle()\">"+'╳'+"</button>";
     }
 
-
     numbersholder.innerHTML = textofnumbers;
+}
+
+function generategradientssview(activecategorynowforgradient) {
+    if (activecategorynowforgradient == undefined) {
+        activecategorynowforgradient = 'background';
+    }
+    if (activecategory == '') {
+        activecategory = 'background';
+    }
+    let gradientpaletteholder = document.getElementById("palette9");
+    let textofpalette9 = '';
+
+    for (catego = 0; catego < model.categories.length; catego++) {
+        let gradientcategory = model.categories[catego];
+
+        if (activecategorynowforgradient == model.categories[catego]) {
+
+            textofpalette9 += '<div class=\"paletteheader\">Gradients '+gradientcategory+'</div>\n' +
+                '\n' +
+                '                <input type=\"color\" class=\"gradientcolor1\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#73caee\">\n' +
+                '                <input type=\"color\" class=\"gradientcolor2\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#f6639a\">\n' +
+                '                <input type=\"color\" class=\"gradientcolor3\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#d7f444\">\n' +
+                '\n' +
+                '                <div style=\"width: 100%; display: flex; justify-content: center;\">\n' +
+                '                    <svg width=\"220\" height=\"44\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" pointer-events=\"none\">\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"22\" cy=\"22\" r=\"22\" fill=\"url(#gradient1'+activecategory+')\"/>\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"66\" cy=\"22\" r=\"22\" fill=\"url(#gradient2'+activecategory+')\" />\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"110\" cy=\"22\" r=\"22\" fill=\"url(#gradient3'+activecategory+')\" />\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"154\" cy=\"22\" r=\"22\" fill=\"url(#gradient4'+activecategory+')\" />\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"198\" cy=\"22\" r=\"22\" fill=\"url(#gradient5'+activecategory+')\" />\n' +
+                '                    </svg>\n' +
+                '                </div>';
+            gradientpaletteholder.innerHTML = textofpalette9;
+        }
+    }
 }
 
 function removestyle() {
@@ -365,5 +401,32 @@ function download() {
         document.body.removeChild(elem);
     }*/
 }
+
+function changinggradient(colorforgradient) {
+    let g1name = 'g1'+activecategory;
+    let g2name = 'g2'+activecategory;
+    let g3name = 'g3'+activecategory;
+    let g1 = document.getElementsByClassName(g1name);
+    let g2 = document.getElementsByClassName(g2name);
+    let g3 = document.getElementsByClassName(g3name);
+
+    if (colorforgradient.getAttribute('class') == 'gradientcolor1') {
+        for(var i = 0; i < g1.length; i++) {
+            g1[i].setAttribute("stop-color", colorforgradient.value);
+        }
+    }
+    else if (colorforgradient.getAttribute('class') == 'gradientcolor2') {
+        for(var i = 0; i < g2.length; i++) {
+            g2[i].setAttribute("stop-color", colorforgradient.value);
+        }
+    }
+    else if (colorforgradient.getAttribute('class') == 'gradientcolor3') {
+        for(var i = 0; i < g3.length; i++) {
+            g3[i].setAttribute("stop-color", colorforgradient.value);
+        }
+    }
+}
+
+
 
 

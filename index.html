@@ -6,6 +6,7 @@
     <title>AvatarCreator</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
+    <script src="defs.js"></script>
 </head>
 <body onload="generateview()">
 <div class="top">
@@ -18,6 +19,76 @@
 <div class="content">
     <div id="column1" class="column1">
         <svg id="avatar"  viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+            <defs id="avatardefs">
+                <linearGradient id="gradient1hair" x1="0" x2="0" y1="0" y2="1">
+                                <stop class="g1hair" offset="0%" stop-color="#000000"/>
+                    <stop class="g2hair" offset="50%" stop-color="#ffffff"/>
+                    <stop class="g3hair" offset="100%" stop-color="#000000"/>
+                            </linearGradient>
+                <linearGradient id="gradient2hair" x2="1" y2="1">
+                                <stop class="g1hair" offset="0%" stop-color="#ffffff" />
+                    <stop class="g2hair" offset="100%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient3hair" gradientTransform="rotate(90)">
+                                <stop class="g1hair" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2hair" offset="95%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient4hair">
+                                <stop class="g1hair" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2hair" offset="50%" stop-color="#000000" />
+                    <stop class="g3hair" offset="95%"  stop-color="#ffffff" />
+                            </linearGradient>
+                <radialGradient id="gradient5hair">
+                                <stop class="g1hair" offset="20%" stop-color="#ffffff" />
+                    <stop class="g2hair" offset="100%" stop-color="#000000" />
+                            </radialGradient>
+
+                <linearGradient id="gradient1shirt" x1="0" x2="0" y1="0" y2="1">
+                                <stop class="g1shirt" offset="0%" stop-color="#000000"/>
+                    <stop class="g2shirt" offset="50%" stop-color="#ffffff"/>
+                    <stop class="g3shirt" offset="100%" stop-color="#000000"/>
+                            </linearGradient>
+                <linearGradient id="gradient2shirt" x2="1" y2="1">
+                                <stop class="g1shirt" offset="0%" stop-color="#ffffff" />
+                    <stop class="g2shirt" offset="100%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient3shirt" gradientTransform="rotate(90)">
+                                <stop class="g1shirt" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2shirt" offset="95%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient4shirt">
+                                <stop class="g1shirt" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2shirt" offset="50%" stop-color="#000000" />
+                    <stop class="g3shirt" offset="95%"  stop-color="#ffffff" />
+                            </linearGradient>
+                <radialGradient id="gradient5shirt">
+                                <stop class="g1shirt" offset="20%" stop-color="#ffffff" />
+                    <stop class="g2shirt" offset="100%" stop-color="#000000" />
+                            </radialGradient>
+            
+                <linearGradient id="gradient1background" x1="0" x2="0" y1="0" y2="1">
+                                <stop class="g1background" offset="0%" stop-color="#000000"/>
+                    <stop class="g2background" offset="50%" stop-color="#ffffff"/>
+                    <stop class="g3background" offset="100%" stop-color="#000000"/>
+                            </linearGradient>
+                <linearGradient id="gradient2background" x2="1" y2="1">
+                                <stop class="g1background" offset="0%" stop-color="#ffffff" />
+                    <stop class="g2background" offset="100%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient3background" gradientTransform="rotate(90)">
+                                <stop class="g1background" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2background" offset="95%" stop-color="#000000" />
+                            </linearGradient>
+                <linearGradient id="gradient4background">
+                                <stop class="g1background" offset="5%"  stop-color="#ffffff" />
+                    <stop class="g2background" offset="50%" stop-color="#000000" />
+                    <stop class="g3background" offset="95%"  stop-color="#ffffff" />
+                            </linearGradient>
+                <radialGradient id="gradient5background">
+                                <stop class="g1background" offset="20%" stop-color="#ffffff" />
+                    <stop class="g2background" offset="100%" stop-color="#000000" />
+                            </radialGradient>
+            </defs>
     <g id="avatarcreator" class="avatarcreator">
         <rect id="background1" class="background1" x="0" y="0" width="500" height="500"/>
 
@@ -596,29 +667,7 @@
                 <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#e8a15f">
 
             </div>
-            <div class="innercolorpalette palette9">
-
-                <div class="paletteheader">Gradients</div>
-
-                <input type="color" onclick="changingcolor(this)" onchange="changingcolor(this)" id="colorchooser" class="colorchooser" name="colorchooser" value="#73caee">
-
-                <svg width="88" height="44" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0%" stop-color="red"/>
-                            <stop offset="50%" stop-color="black" stop-opacity="0"/>
-                            <stop offset="100%" stop-color="blue"/>
-                        </linearGradient>
-                        <linearGradient id="my-cool-gradient" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#447799" />
-                            <stop offset="50%" stop-color="#224488" />
-                            <stop offset="100%" stop-color="#112266" />
-                        </linearGradient>
-                    </defs>
-                    <circle cx="22" cy="22" r="22" fill="url(#Gradient2)" />
-                    <circle cx="66" cy="22" r="22" fill="url(#my-cool-gradient)" />
-                </svg>
-
+            <div id="palette9" class="innercolorpalette palette9">
             </div>
 
         </div>

@@ -292,3 +292,9 @@ input[type="color"]::-webkit-color-swatch:hover {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+.gradientchooser {
+  &:hover {
+    cursor: pointer;
+  }
+}
