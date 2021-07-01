@@ -108,7 +108,7 @@ function category(chosencategory) {
         paletteswitch();
     }
     let paletteholder = document.getElementById('colorpaletteholder');
-    if (activecategory == 'eyes') {
+    if (activecategory == 'eyes'||activecategory == 'pupils') {
         paletteholder.style.display = 'none';
     } else {paletteholder.style.display = 'flex';}
 }
