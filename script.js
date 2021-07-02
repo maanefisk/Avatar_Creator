@@ -1,4 +1,5 @@
-/*Here is all categories stored, also which elements that show by default, and how many palettes there are*/
+
+/*Here is all categories stored, also which elements that show by default, and how many palettes there are +boldnumbers*/
 const model = {
     categories: ["hair","bangs","head","neck","ears","eyes","eyelids","iris","pupils","brows","nose","lips","mouth","shirt","background"],
     hair : '',
@@ -17,6 +18,7 @@ const model = {
     bangs : '',
     background : '',
     palettes: ["palette1","palette2","palette3","palette4","palette5","palette6","palette7","palette8","palette9"],
+    boldnumbers: [],
 };
 
 /*List items and their numbers*/
@@ -35,7 +37,6 @@ let visiblepalette = model.palettes[0];
 let chosenpalette = document.getElementsByClassName(visiblepalette);
 let activenow;
 let lastbold;
-let lastboldnumber;
 
 /*How many elements inside each category:*/
 /*Plus one on number if new element to this category is added, or if new category is added to model.categories, add how many*/
@@ -74,6 +75,8 @@ function removepreviousStyle() {
 function category(chosencategory) {
     activecategory = chosencategory.innerText.toLowerCase();
     categoryathand = activecategory;
+
+
     generatenumbersview(activecategory);
     generategradientssview(activecategory);
 
@@ -155,11 +158,15 @@ function thenumber(chosennumber) {
     chosenelement = elementathand;
 
     /*Make number stand out*/
-    if (lastboldnumber != null) {
-        lastboldnumber.classList.remove('bolder');
+    model.boldnumbers.push(chosennumber);
+
+    for (nuli = 0; nuli < model.boldnumbers.length; nuli++) {
+        if (model.boldnumbers[nuli].classList[1] == chosennumber.classList[1] && model.boldnumbers[nuli] != chosennumber) {
+            model.boldnumbers[nuli].classList.remove('bolder');
+            model.boldnumbers.splice(nuli,1);
+        }
+        model.boldnumbers[nuli].classList.add('bolder');
     }
-    chosennumber.classList.add('bolder');
-    lastboldnumber = chosennumber;
 }
 
 /*Controller*/
@@ -348,7 +355,7 @@ function generatenumbersview(activeone) {
     let activenumber = eval(activeone);
 
     for (n = 1; n < activenumber+1; n++) {
-        textofnumbers += "<button id=\"number"+n+"\" class=\"number\" onclick=\"thenumber(this)\">"+n+"</button>";
+        textofnumbers += "<button id=\"number"+n+"\" class=\"number "+activeone+"\" onclick=\"thenumber(this)\">"+n+"</button>";
     }
 
     if (activeone == 'hair' || activeone == 'bangs' || activeone == 'ears' || activeone == 'eyes' || activeone == 'eyelids' || activeone == 'iris' || activeone == 'pupils' || activeone == 'brows' || activeone == 'nose' || activeone == 'lips' || activeone == 'mouth') {
