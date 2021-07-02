@@ -72,7 +72,7 @@ input[type=color]::-webkit-color-swatch:hover {
   appearance: none;
   height: 5px;
   /* Specified height */
-  background: #d3d3d3;
+  background: #aaaaaa;
   /* Grey background */
   outline: none;
   /* Remove outline */
@@ -98,6 +98,7 @@ input[type=color]::-webkit-color-swatch:hover {
   cursor: pointer;
   /* Cursor on hover */
   border-radius: 50%;
+  box-shadow: 1px 1px 2px #bebebe, -1px -1px 2px #ffffff;
 }
 .column1 .slidecontainer .slider::-moz-range-thumb {
   width: 25px;
@@ -109,6 +110,7 @@ input[type=color]::-webkit-color-swatch:hover {
   cursor: pointer;
   /* Cursor on hover */
   border-radius: 50%;
+  box-shadow: 1px 1px 2px #bebebe, -1px -1px 2px #ffffff;
 }
 .column1 #avatar {
   height: 500px;
@@ -148,6 +150,7 @@ input[type=color]::-webkit-color-swatch:hover {
   transition: font-size 0.1s;
   border: none;
   height: 100%;
+  box-shadow: 1px 1px 2px #bebebe, -1px -1px 2px #ffffff;
 }
 .column2 .menutext:hover {
   cursor: pointer;
@@ -163,7 +166,7 @@ input[type=color]::-webkit-color-swatch:hover {
 }
 .bottom .numbersholder {
   height: 50px;
-  width: 700px;
+  width: 701px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -178,10 +181,12 @@ input[type=color]::-webkit-color-swatch:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: font-size 0.1s;
-  border: 1px solid black;
+  transition: 0.1s;
+  border: none;
   width: 100%;
   animation: appear 0.6s ease-in-out;
+  text-shadow: 1px -1px 2px #ffffff, -1px 1px 2px #a8a8a8;
+  box-shadow: 1px 1px 2px #bebebe, -1px -1px 2px #ffffff;
 }
 .bottom .number:hover {
   cursor: pointer;
@@ -323,6 +328,8 @@ input[type=color]::-webkit-color-swatch:hover {
 .bolder {
   font-weight: bolder;
   font-size: 25px !important;
+  box-shadow: inset 1px 1px 2px #bebebe, inset -1px -1px 2px #ffffff !important;
+  background: linear-gradient(145deg, #e2e2e2, #efefef) !important;
 }
 
 /*Keyframes*/

@@ -354,6 +354,8 @@ function generatenumbersview(activeone) {
     var textofnumbers = "";
     let activenumber = eval(activeone);
 
+
+
     for (n = 1; n < activenumber+1; n++) {
         textofnumbers += "<button id=\"number"+n+"\" class=\"number "+activeone+"\" onclick=\"thenumber(this)\">"+n+"</button>";
     }
