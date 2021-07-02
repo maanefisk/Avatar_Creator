@@ -233,6 +233,29 @@ input[type=color]::-webkit-color-swatch:hover {
   padding-top: 10px;
   font-size: 90%;
 }
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser {
+  cy: 24;
+  r: 22;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(1) {
+  cx: 24;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(2) {
+  cx: 70;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(3) {
+  cx: 116;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(4) {
+  cx: 162;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(5) {
+  cx: 206;
+}
+.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:hover {
+  cursor: pointer;
+  animation: popgradient 0.3s both ease;
+}
 .bottom .colorpaletteholder .colorpalette .innercolorpalette .colorchooser {
   padding: 2px 2px;
 }
@@ -301,8 +324,13 @@ input[type=color]::-webkit-color-swatch:hover {
     opacity: 1;
   }
 }
-.gradientchooser:hover {
-  cursor: pointer;
+@keyframes popgradient {
+  0% {
+    r: 22;
+  }
+  100% {
+    r: 24;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

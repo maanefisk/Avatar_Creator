@@ -224,6 +224,33 @@ input[type="color"]::-webkit-color-swatch:hover {
           padding-top: 10px;
           font-size: 90%;
         }
+        .gradientchooser {
+          cy: 24;
+          r: 22;
+          &:nth-child(1) {
+            cx: 24;
+          }
+
+          &:nth-child(2) {
+            cx: 70;
+          }
+
+          &:nth-child(3) {
+            cx: 116;
+          }
+
+          &:nth-child(4) {
+            cx: 162;
+          }
+
+          &:nth-child(5) {
+            cx: 206;
+          }
+          &:hover {
+            cursor: pointer;
+            animation: popgradient 0.3s both ease;
+          }
+        }
 
         .colorchooser {
           padding: 2px 2px;
@@ -299,8 +326,7 @@ input[type="color"]::-webkit-color-swatch:hover {
   to {opacity: 1;}
 }
 
-.gradientchooser {
-  &:hover {
-    cursor: pointer;
-  }
+@keyframes popgradient {
+  0% {r:22;}
+  100% {r: 24;}
 }

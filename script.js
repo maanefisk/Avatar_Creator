@@ -365,12 +365,12 @@ function generategradientssview(activecategorynowforgradient) {
                 '                <input type=\"color\" class=\"gradientcolor3\" onclick=\"changinggradient(this)\" onchange=\"changinggradient(this)\" class=\"colorchooser\" name=\"colorchooser\" value=\"#e25a32\">\n' +
                 '\n' + '<div class=\"paletteheader2\">Velg gradient type:</div>' +
                 '                <div style=\"width: 100%; display: flex; justify-content: center;\">\n' +
-                '                    <svg width=\"220\" height=\"44\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" pointer-events=\"none\">\n' +
-                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"22\" cy=\"22\" r=\"22\" fill=\"url(#gradient1'+activecategory+')\"/>\n' +
-                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"66\" cy=\"22\" r=\"22\" fill=\"url(#gradient2'+activecategory+')\" />\n' +
-                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"110\" cy=\"22\" r=\"22\" fill=\"url(#gradient3'+activecategory+')\" />\n' +
-                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"154\" cy=\"22\" r=\"22\" fill=\"url(#gradient4'+activecategory+')\" />\n' +
-                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" cx=\"198\" cy=\"22\" r=\"22\" fill=\"url(#gradient5'+activecategory+')\" />\n' +
+                '                    <svg width=\"230\" height=\"48\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" pointer-events=\"none\">\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" fill=\"url(#gradient1'+activecategory+')\"/>\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" fill=\"url(#gradient2'+activecategory+')\"/>\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" fill=\"url(#gradient3'+activecategory+')\"/>\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" fill=\"url(#gradient4'+activecategory+')\"/>\n' +
+                '                        <circle pointer-events=\"all\" class=\"gradientchooser\" onclick=\"changingcolor(this)\" fill=\"url(#gradient5'+activecategory+')\"/>\n' +
                 '                    </svg>\n' +
                 '                </div>';
             gradientpaletteholder.innerHTML = textofpalette9;
