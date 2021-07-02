@@ -1,4 +1,4 @@
-/*Here is all categories stored, counter is stored and which chosen element is stored*/
+/*Here is all categories stored, also which elements that show by default, and how many palettes there are*/
 const model = {
     categories: ["hair","bangs","head","neck","ears","eyes","eyelids","iris","pupils","brows","nose","lips","mouth","shirt","background"],
     hair : '',
@@ -36,6 +36,8 @@ let chosenpalette = document.getElementsByClassName(visiblepalette);
 let activenow;
 
 /*How many elements inside each category:*/
+/*Plus one on number if new element to this category is added, or if new category is added to model.categories, add how many*/
+/*Elements it hold here*/
 let hair = 12;
 let neck = 2;
 let head = 2;
@@ -52,12 +54,21 @@ let mouth = 6;
 let bangs = 7;
 let background = 1;
 
+/*Controller*/
+/*Gets the last element which was stored in active category and removes its default-show, and shows it to make it able to toggle again*/
 function removepreviousStyle() {
     let savedelement = document.getElementById(model[categoryathand]);
     savedelement.classList.toggle('bydefault');
     savedelement.classList.toggle('show');
 }
 
+/*Controller*/
+/*Stores which category we are in, gives it to numbersview to give it the right category to check for value and*/
+/*To gradients view so it knows which category we are in, and generate for it*/
+/*If no active element is stored, then it defaults to element1 of category. Also sets it to visible instead of default visible*/
+/*If there is a element stored from before in the same category, it hides it, then stores it and gets the element of stored value*/
+/*Then toggles is again. This is to make the toggle of elements when switching between categories and getting back to view old*/
+/*elements stored in that category toggle the right way.*/
 function category(chosencategory) {
     activecategory = chosencategory.innerText.toLowerCase();
     categoryathand = activecategory;
@@ -94,7 +105,7 @@ function category(chosencategory) {
         slidecontainer.style.display = 'block';
     } else {slidecontainer.style.display = 'none';}
 
-    /*The right colorpalette or none*/
+    /*The right colorpalette for category or hides it for categories that should not have a colorpalette*/
     if (activecategory == 'hair'||activecategory == 'brows') {
         activenow = 'palette6';
         paletteswitch();
@@ -113,6 +124,9 @@ function category(chosencategory) {
     } else {paletteholder.style.display = 'flex';}
 }
 
+/*Controller*/
+/*When number in category is clicked, get stored here*/
+/*And also sets which is the chosen element in chosenelement variable which is global.*/
 function thenumber(chosennumber) {
     numberathand = chosennumber.innerText;
     newoelement = categoryathand+numberathand;
@@ -131,7 +145,9 @@ function thenumber(chosennumber) {
 
     chosenelement = elementathand;
 }
-/*Changes color of chosen category*/
+
+/*Controller*/
+/*Changes color of chosen category + if element has 2 elements in it, it gives a darker color to that also.*/
 function changingcolor(thecolorpicker) {
     let o = 0;
     if (chosenelement == '') {
@@ -140,6 +156,7 @@ function changingcolor(thecolorpicker) {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
         chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
         /*Gives the background if the colorchooser is INPUT/Customizable*/
+        /*PLUS, at the end: getAttribute is for the gradients.*/
 
         /*Makes all other elements in category change to the color you've chosen*/
         for (x = 1; x <= eval(activecategory); x++) {
@@ -157,6 +174,7 @@ function changingcolor(thecolorpicker) {
     }
     /*console.log(chosenelement.children.length);*/
 
+    /*Color generator:*/
     /*If categoriy is head, then all the other skinobjects get the same color generated*/
     /*Lets do bangs to hair do the same*/
     let allneck;
@@ -255,6 +273,7 @@ function changingcolor(thecolorpicker) {
             allbrows.style.fill = chosenelement.style.fill;
         }
     }
+    /*Removes filters on generated color if you go to specific categories and choose own colors*/
     else if (activecategory == 'neck'|| activecategory == 'ears'|| activecategory =='eyelids'|| activecategory == 'nose'|| activecategory == 'bangs'|| activecategory == 'mouth'|| activecategory == 'lips') {
         for (ac = 1; ac <= eval(activecategory); ac++) {
             let skinobject = document.getElementById(activecategory+ac);
@@ -262,6 +281,8 @@ function changingcolor(thecolorpicker) {
         }
     }
 }
+
+/*Controller*/
 /*Enables positioning for certain elements with slider*/
 function positionelement(slider) {
     if (activecategory == 'hair' || activecategory == 'ears' || activecategory == 'eyelids' || activecategory == 'nose' || activecategory =='mouth' || activecategory == 'lips' || activecategory == 'brows') {
@@ -277,7 +298,8 @@ function positionelement(slider) {
         }
     }
 }
-
+/*View*/
+/*All views from body.onload is triggered here*/
 function generateview() {
     /*Make menu of categories*/
     let column2 = document.getElementById("column2");
@@ -299,6 +321,10 @@ function generateview() {
     genratedefs();
 }
 
+/*View*/
+/*Generates numbers to choose between the different elements in each category. How many numbers = how many elements inside category*/
+/*activeone is the category, and eval gets its value with categories name and checks its variable with same name.*/
+/*The variables for this is stated in top of sheet.*/
 function generatenumbersview(activeone) {
     let n;
     let numbersholder = document.getElementById("numbersholder");
@@ -315,7 +341,8 @@ function generatenumbersview(activeone) {
 
     numbersholder.innerHTML = textofnumbers;
 }
-
+/*View*/
+/*Generates gradient-palette for each category.*/
 function generategradientssview(activecategorynowforgradient) {
     if (activecategorynowforgradient == undefined) {
         activecategorynowforgradient = 'background';
@@ -350,12 +377,15 @@ function generategradientssview(activecategorynowforgradient) {
         }
     }
 }
-
+/*Controller*/
+/*Makes the active element hidden when triggered:*/
 function removestyle() {
     chosenelement.classList.remove('show');
     chosenelement.classList.add('bydefault');
 }
 
+/*Controller*/
+/*When arrows on palette is clicked, it hides previous palette, checks if we go left or right, and shows next palette.*/
 function paletteswitch(butt) {
     chosenpalette[0].style.display = "none";
     if (typeof butt != 'undefined') {
@@ -384,6 +414,8 @@ function paletteswitch(butt) {
     chosenpalette[0].style.display = "flex";
 }
 
+/*Controller*/
+/*Here the image of avatar should be downloaded, future*/
 function download() {
     let svg = document.getElementById('avatar').outerHTML;
     console.log(svg);
@@ -403,6 +435,8 @@ function download() {
     }*/
 }
 
+/*Controller*/
+/*Enables you to choose colors in the imputs of gradient palette and applies them to gradient-types below.*/
 function changinggradient(colorforgradient) {
     let g1name = 'g1'+activecategory;
     let g2name = 'g2'+activecategory;
