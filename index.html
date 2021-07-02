@@ -11,13 +11,12 @@
 <body onload="generateview()">
 <div class="top">
     <div class="header">PlusAvatar</div>
-    <div id="slidecontainer" class="slidecontainer">
-        <div>Posisjoner:</div>
-        <input type="range" min="-10" max="10" value="0" class="slider" id="positionslider" oninput="positionelement(this)">
-    </div>
 </div>
 <div class="content">
     <div id="column1" class="column1">
+        <div id="slidecontainer" class="slidecontainer">
+            <input type="range" min="-10" max="10" value="0" class="slider" id="positionslider" oninput="positionelement(this)">
+        </div>
         <svg id="avatar"  viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <defs id="avatardefs">
                 <!--Is generates in defs.js-->

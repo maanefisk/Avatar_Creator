@@ -34,6 +34,8 @@ let defaultbox;
 let visiblepalette = model.palettes[0];
 let chosenpalette = document.getElementsByClassName(visiblepalette);
 let activenow;
+let lastbold;
+let lastboldnumber;
 
 /*How many elements inside each category:*/
 /*Plus one on number if new element to this category is added, or if new category is added to model.categories, add how many*/
@@ -122,6 +124,13 @@ function category(chosencategory) {
     if (activecategory == 'eyes'||activecategory == 'pupils') {
         paletteholder.style.display = 'none';
     } else {paletteholder.style.display = 'flex';}
+
+    /*Make menucategory stand out*/
+    if (lastbold != null) {
+        lastbold.classList.remove('bolder');
+    }
+    chosencategory.classList.add('bolder');
+    lastbold = chosencategory;
 }
 
 /*Controller*/
@@ -144,6 +153,13 @@ function thenumber(chosennumber) {
     elementathand.classList.toggle('show');
 
     chosenelement = elementathand;
+
+    /*Make number stand out*/
+    if (lastboldnumber != null) {
+        lastboldnumber.classList.remove('bolder');
+    }
+    chosennumber.classList.add('bolder');
+    lastboldnumber = chosennumber;
 }
 
 /*Controller*/
@@ -336,7 +352,7 @@ function generatenumbersview(activeone) {
     }
 
     if (activeone == 'hair' || activeone == 'bangs' || activeone == 'ears' || activeone == 'eyes' || activeone == 'eyelids' || activeone == 'iris' || activeone == 'pupils' || activeone == 'brows' || activeone == 'nose' || activeone == 'lips' || activeone == 'mouth') {
-        textofnumbers += "<button id=\"xout"+n+"\" class=\"number\" onclick=\"removestyle()\">"+'╳'+"</button>";
+        textofnumbers += "<button id=\"xout"+n+"\" class=\"number xout\" onclick=\"removestyle()\">"+'╳'+"</button>";
     }
 
     numbersholder.innerHTML = textofnumbers;
