@@ -36,7 +36,7 @@ input[type=color]::-webkit-color-swatch:hover {
 }
 
 .top {
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -50,23 +50,25 @@ input[type=color]::-webkit-color-swatch:hover {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .column1 {
   height: 500px;
+  display: flex;
 }
 .column1 .slidecontainer {
   position: relative;
   display: none;
-  left: -19px;
+  top: 0;
+  left: -100px;
   width: 0;
   height: 0;
   transform: rotate(90deg);
 }
 .column1 .slidecontainer .slider {
-  width: 500px;
+  width: 498px;
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
@@ -127,16 +129,116 @@ input[type=color]::-webkit-color-swatch:hover {
 .column1 .background1 {
   fill: #73caee;
 }
-
-.column2 {
-  height: 500px;
+.column1 .colorpaletteholder {
+  height: 498px;
   width: 200px;
-  background: transparent;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+}
+.column1 .colorpaletteholder .paletteswitchbuttonholder {
+  width: 200px;
+  display: flex;
+}
+.column1 .colorpaletteholder .paletteswitchbuttonholder button {
+  /*width: 50px;*/
+  height: 75px;
+  cursor: pointer;
+  font-size: 50px;
+  border: none;
+  background: transparent;
+  transition: 0.3s;
+}
+.column1 .colorpaletteholder .paletteswitchbuttonholder button:hover {
+  color: #6a83aa;
+  transform: scale(1.2);
+}
+.column1 .colorpaletteholder .colorpalette {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: none;
+  animation: appear 0.3s ease-in forwards;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .paletteheader {
+  width: 100%;
+  text-align: center;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .paletteheader2 {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 90%;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser {
+  cy: 24;
+  r: 22;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(1) {
+  cx: 24;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(2) {
+  cx: 70;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(3) {
+  cx: 116;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(4) {
+  cx: 162;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(5) {
+  cx: 206;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:hover {
+  cursor: pointer;
+  animation: popgradient 0.3s both ease;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .colorchooser {
+  padding: 2px 2px;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .colordiv {
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 2px 2px;
+  transition: 0.3s;
+}
+.column1 .colorpaletteholder .colorpalette .innercolorpalette .colordiv:hover {
+  transform: scale(1.2);
+}
+.column1 .colorpaletteholder .colorpalette .palette2 {
+  width: 310px;
+}
+.column1 .colorpaletteholder .colorpalette .palette4, .column1 .colorpaletteholder .colorpalette .palette5 {
+  width: 530px !important;
+}
+.column1 .colorpaletteholder .colorpalette .palette6 {
+  width: 265px;
+}
+.column1 .colorpaletteholder .colorpalette .palette7 {
+  width: 530px;
+}
+
+.column2 {
+  height: 50px;
+  width: 701px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
 }
 .column2 .menutext {
   background: #efefef;
@@ -195,134 +297,6 @@ input[type=color]::-webkit-color-swatch:hover {
 }
 .bottom .xout:hover {
   color: #e21408;
-}
-.bottom .colorpaletteholder {
-  height: 269px;
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.bottom .colorpaletteholder button {
-  width: 30px;
-  height: 75px;
-  cursor: pointer;
-  font-size: 50px;
-  border: none;
-  background: transparent;
-  transition: 0.3s;
-}
-.bottom .colorpaletteholder button:hover {
-  color: #6a83aa;
-  transform: scale(1.2);
-}
-.bottom .colorpaletteholder .colorpalette {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 0;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette {
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  display: none;
-  animation: appear 0.3s ease-in forwards;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .paletteheader {
-  width: 100%;
-  text-align: center;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .paletteheader2 {
-  width: 100%;
-  text-align: center;
-  padding-top: 10px;
-  font-size: 90%;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser {
-  cy: 24;
-  r: 22;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(1) {
-  cx: 24;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(2) {
-  cx: 70;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(3) {
-  cx: 116;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(4) {
-  cx: 162;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:nth-child(5) {
-  cx: 206;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .gradientchooser:hover {
-  cursor: pointer;
-  animation: popgradient 0.3s both ease;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .colorchooser {
-  padding: 2px 2px;
-  box-shadow: inset 3px 0 4px rgba(0, 0, 0, 0.18), inset 2px 3px 3px rgba(255, 255, 255, 0.9);
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .colordiv {
-  height: 40px;
-  width: 40px;
-  background: transparent;
-  border-radius: 50%;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin: 2px 2px;
-  transition: 0.3s;
-}
-.bottom .colorpaletteholder .colorpalette .innercolorpalette .colordiv:hover {
-  transform: scale(1.2);
-}
-.bottom .colorpaletteholder .colorpalette .palette2 {
-  width: 310px;
-}
-.bottom .colorpaletteholder .colorpalette .palette4, .bottom .colorpaletteholder .colorpalette .palette5 {
-  width: 530px !important;
-}
-.bottom .colorpaletteholder .colorpalette .palette6 {
-  width: 265px;
-}
-.bottom .colorpaletteholder .colorpalette .palette7 {
-  width: 530px;
-}
-.bottom .buttonholder {
-  display: flex;
-  flex-direction: row;
-}
-.bottom .buttonius {
-  height: 50px;
-  color: black;
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: font-size 0.1s;
-  border: 1px solid #aa7d7d;
-}
-.bottom .buttonius:hover {
-  background: #e8e8e8;
-  cursor: pointer;
-  font-size: 25px;
-}
-.bottom .save {
-  width: 200px;
-}
-.bottom .redo {
-  width: 50px;
-  font-size: 40px;
-}
-.bottom .redo:hover {
-  font-size: 45px;
 }
 
 /*Common*/

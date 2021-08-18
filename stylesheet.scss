@@ -30,7 +30,7 @@ input[type="color"]::-webkit-color-swatch:hover {
   cursor: pointer;
 }
 .top {
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -47,22 +47,24 @@ input[type="color"]::-webkit-color-swatch:hover {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .column1 {
   height: 500px;
+  display: flex;
 
   & .slidecontainer {
     position: relative;
     display: none;
-    left: -19px;
+    top: 0;
+    left: -100px;
     width: 0;
     height: 0;
     transform: rotate(90deg);
 
     & .slider {
-      width:500px;
+      width:498px;
       -webkit-appearance: none;  /* Override default CSS styles */
       appearance: none;
       height: 5px; /* Specified height */
@@ -115,16 +117,134 @@ input[type="color"]::-webkit-color-swatch:hover {
   .background1 {
     fill:#73caee;
   }
+
+  .colorpaletteholder {
+    height: 498px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+
+
+    .paletteswitchbuttonholder {
+      width: 200px;
+      display: flex;
+
+      & button {
+        /*width: 50px;*/
+        height: 75px;
+        cursor: pointer;
+        font-size: 50px;
+        border: none;
+        background: transparent;
+        transition: 0.3s;
+
+        &:hover {
+          color: #6a83aa;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+
+
+    .colorpalette {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      padding: 15px 0;
+
+      .innercolorpalette {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: none;
+        animation: appear 0.3s ease-in forwards;
+
+        .paletteheader {
+          width: 100%;
+          text-align: center;
+        }
+        .paletteheader2 {
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          font-size: 90%;
+        }
+        .gradientchooser {
+          cy: 24;
+          r: 22;
+          &:nth-child(1) {
+            cx: 24;
+          }
+
+          &:nth-child(2) {
+            cx: 70;
+          }
+
+          &:nth-child(3) {
+            cx: 116;
+          }
+
+          &:nth-child(4) {
+            cx: 162;
+          }
+
+          &:nth-child(5) {
+            cx: 206;
+          }
+          &:hover {
+            cursor: pointer;
+            animation: popgradient 0.3s both ease;
+          }
+        }
+
+        .colorchooser {
+          padding: 2px 2px;
+        }
+        .colordiv {
+          height: 40px;
+          width: 40px;
+          background: transparent;
+          border-radius: 50%;
+          cursor: pointer;
+          box-sizing: border-box;
+          margin: 2px 2px;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .palette2 {
+        width: 310px;
+      }
+      .palette4 , .palette5 {
+        width: 530px !important;
+      }
+      .palette6 {
+        width: 265px;
+      }
+      .palette7 {
+        width: 530px;
+      }
+    }
+
+  }
 }
 .column2 {
-  height: 500px;
-  width: 200px;
+  height: 50px;
+  width: 701px;
   background: transparent;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: stretch;
-  -webkit-justify-content: space-between;
+  flex-direction: row;
+  overflow-x: scroll;
 
   .menutext {
     background: #efefef;
@@ -188,153 +308,6 @@ input[type="color"]::-webkit-color-swatch:hover {
   }
   .xout:hover {
     color: #e21408;
-  }
-
-  .colorpaletteholder {
-    height: 269px;
-    width: 700px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    button {
-      width: 30px;
-      height: 75px;
-      cursor: pointer;
-      font-size: 50px;
-      border: none;
-      background: transparent;
-      transition: 0.3s;
-
-      &:hover {
-        color: #6a83aa;
-        transform: scale(1.2);
-      }
-    }
-
-    .colorpalette {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-
-      align-items: center;
-      padding: 15px 0;
-
-      .innercolorpalette {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        display: none;
-        animation: appear 0.3s ease-in forwards;
-
-        .paletteheader {
-          width: 100%;
-          text-align: center;
-        }
-        .paletteheader2 {
-          width: 100%;
-          text-align: center;
-          padding-top: 10px;
-          font-size: 90%;
-        }
-        .gradientchooser {
-          cy: 24;
-          r: 22;
-          &:nth-child(1) {
-            cx: 24;
-          }
-
-          &:nth-child(2) {
-            cx: 70;
-          }
-
-          &:nth-child(3) {
-            cx: 116;
-          }
-
-          &:nth-child(4) {
-            cx: 162;
-          }
-
-          &:nth-child(5) {
-            cx: 206;
-          }
-          &:hover {
-            cursor: pointer;
-            animation: popgradient 0.3s both ease;
-          }
-        }
-
-        .colorchooser {
-          padding: 2px 2px;
-          box-shadow: inset 3px 0 4px rgba(0, 0, 0, 0.18),
-                  inset 2px 3px 3px rgba(255, 255, 255, 0.9)
-          ;
-        }
-        .colordiv {
-          height: 40px;
-          width: 40px;
-          background: transparent;
-          border-radius: 50%;
-          cursor: pointer;
-          box-sizing: border-box;
-          margin: 2px 2px;
-          transition: 0.3s;
-
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
-      }
-      .palette2 {
-        width: 310px;
-      }
-      .palette4 , .palette5 {
-        width: 530px !important;
-      }
-      .palette6 {
-        width: 265px;
-      }
-      .palette7 {
-        width: 530px;
-      }
-    }
-
-  }
-
-  .buttonholder {
-    display: flex;
-    flex-direction: row;
-  }
-  .buttonius {
-    height: 50px;
-    color: black;
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: font-size 0.1s;
-    border: 1px solid #aa7d7d;
-
-    &:hover {
-      background: #e8e8e8;
-      cursor: pointer;
-      font-size: 25px;
-    }
-  }
-  .save {
-    width: 200px;
-  }
-  .redo {
-    width: 50px;
-    font-size: 40px;
-
-    &:hover {
-      font-size: 45px;
-    }
   }
 }
 
