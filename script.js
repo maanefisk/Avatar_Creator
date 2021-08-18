@@ -412,23 +412,25 @@ function removestyle() {
 /*Controller*/
 /*When arrows on palette is clicked, it hides previous palette, checks if we go left or right, and shows next palette.*/
 function paletteswitch(butt) {
+    let leftarrow = document.getElementById('leftpalettebutton').innerText;
+    let rightarrow = document.getElementById('rightpalettebutton').innerText;
     chosenpalette[0].style.display = "none";
     if (typeof butt != 'undefined') {
         for (j = 0; j < model.palettes.length; j++) {
             if (visiblepalette == model.palettes[j]) {
-                if (butt.innerText == '❯' && activenow != 'palette'+model.palettes.length) {
+                if (butt.innerText == rightarrow && activenow != 'palette'+model.palettes.length) {
                     activenow = model.palettes[j+1];
                 }
-                else if (butt.innerText == '❯' && activenow == 'palette'+model.palettes.length) {
+                else if (butt.innerText == rightarrow && activenow == 'palette'+model.palettes.length) {
                     activenow = model.palettes[0];
                 }
                 if (activenow == null) {
                     activenow = 'palette1'
                 }
-                if (butt.innerText == '❮' && activenow != 'palette1') {
+                if (butt.innerText == leftarrow && activenow != 'palette1') {
                     activenow = model.palettes[j-1];
                 }
-                else if (butt.innerText == '❮' && activenow == 'palette1') {
+                else if (butt.innerText == leftarrow && activenow == 'palette1') {
                     activenow = model.palettes[(model.palettes.length-1)];
                 }
             }
