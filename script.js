@@ -361,7 +361,7 @@ function generatenumbersview(activeone) {
     }
 
     if (activeone == 'hair' || activeone == 'bangs' || activeone == 'ears' || activeone == 'eyes' || activeone == 'eyelids' || activeone == 'iris' || activeone == 'pupils' || activeone == 'brows' || activeone == 'nose' || activeone == 'lips' || activeone == 'mouth') {
-        textofnumbers += "<button id=\"xout"+n+"\" class=\"number xout\" onclick=\"removestyle()\">"+'╳'+"</button>";
+        textofnumbers += "<button id=\"xout"+n+"\" class=\"number xout\" onclick=\"removestyle()\">"+'<i class=\"fas fa-times\"></i>'+"</button>";
     }
 
     numbersholder.innerHTML = textofnumbers;
@@ -412,25 +412,26 @@ function removestyle() {
 /*Controller*/
 /*When arrows on palette is clicked, it hides previous palette, checks if we go left or right, and shows next palette.*/
 function paletteswitch(butt) {
-    let leftarrow = document.getElementById('leftpalettebutton').innerText;
-    let rightarrow = document.getElementById('rightpalettebutton').innerText;
+    let leftarrow = document.getElementById('leftpalettebutton');
+    let rightarrow = document.getElementById('rightpalettebutton');
+    
     chosenpalette[0].style.display = "none";
     if (typeof butt != 'undefined') {
         for (j = 0; j < model.palettes.length; j++) {
             if (visiblepalette == model.palettes[j]) {
-                if (butt.innerText == rightarrow && activenow != 'palette'+model.palettes.length) {
+                if (butt == rightarrow && activenow != 'palette'+model.palettes.length) {
                     activenow = model.palettes[j+1];
                 }
-                else if (butt.innerText == rightarrow && activenow == 'palette'+model.palettes.length) {
+                else if (butt == rightarrow && activenow == 'palette'+model.palettes.length) {
                     activenow = model.palettes[0];
                 }
                 if (activenow == null) {
                     activenow = 'palette1'
                 }
-                if (butt.innerText == leftarrow && activenow != 'palette1') {
+                if (butt == leftarrow && activenow != 'palette1') {
                     activenow = model.palettes[j-1];
                 }
-                else if (butt.innerText == leftarrow && activenow == 'palette1') {
+                else if (butt == leftarrow && activenow == 'palette1') {
                     activenow = model.palettes[(model.palettes.length-1)];
                 }
             }

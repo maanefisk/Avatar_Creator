@@ -39,10 +39,11 @@ input[type=color]::-webkit-color-swatch:hover {
   height: 15vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
 }
 .top .header {
+  width: 701px;
   font-size: 50px;
 }
 
@@ -143,17 +144,18 @@ input[type=color]::-webkit-color-swatch:hover {
   display: flex;
 }
 .column1 .colorpaletteholder .paletteswitchbuttonholder button {
-  /*width: 50px;*/
-  height: 75px;
+  height: 50px;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 38px;
   border: none;
   background: transparent;
+}
+.column1 .colorpaletteholder .paletteswitchbuttonholder button i {
   transition: 0.3s;
 }
-.column1 .colorpaletteholder .paletteswitchbuttonholder button:hover {
-  color: #6a83aa;
+.column1 .colorpaletteholder .paletteswitchbuttonholder button:hover > i {
   transform: scale(1.2);
+  color: #00BFFF;
 }
 .column1 .colorpaletteholder .colorpalette {
   width: 100%;

@@ -33,10 +33,11 @@ input[type="color"]::-webkit-color-swatch:hover {
   height: 15vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
 
   & .header {
+    width: 701px;
     font-size: 50px;
   }
 
@@ -133,17 +134,19 @@ input[type="color"]::-webkit-color-swatch:hover {
       display: flex;
 
       & button {
-        /*width: 50px;*/
-        height: 75px;
+        height: 50px;
         cursor: pointer;
-        font-size: 50px;
+        font-size: 38px;
         border: none;
         background: transparent;
-        transition: 0.3s;
 
-        &:hover {
-          color: #6a83aa;
+        & i {
+          transition: 0.3s;
+        }
+
+        &:hover > i {
           transform: scale(1.2);
+          color: #00BFFF;
         }
       }
     }
