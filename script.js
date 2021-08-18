@@ -173,8 +173,9 @@ function thenumber(chosennumber) {
 /*Changes color of chosen category + if element has 2 elements in it, it gives a darker color to that also.*/
 function changingcolor(thecolorpicker) {
     let o = 0;
-    if (chosenelement == '') {
+    if (chosenelement == '' || 'background') {
         document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
+        document.getElementById('colorpaletteholder').style.background = thecolorpicker.style.background || thecolorpicker.value;
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
         chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
@@ -414,7 +415,7 @@ function removestyle() {
 function paletteswitch(butt) {
     let leftarrow = document.getElementById('leftpalettebutton');
     let rightarrow = document.getElementById('rightpalettebutton');
-    
+
     chosenpalette[0].style.display = "none";
     if (typeof butt != 'undefined') {
         for (j = 0; j < model.palettes.length; j++) {
