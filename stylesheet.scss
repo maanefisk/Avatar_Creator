@@ -6,13 +6,7 @@ body {
   margin: 0;
   background: #EBEBEB;
 }
-.colorchooser {
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-  box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.26),
-  -1px -1px 2px rgba(255, 255, 255, 0.45);
-}
+
 input[type="color"] {
   -webkit-appearance: none;
   border: none;
@@ -27,8 +21,7 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
   transition: 0.3s;
-  box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.26),
-  -1px -1px 2px rgba(255, 255, 255, 0.45);
+  box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 input[type="color"]::-webkit-color-swatch:hover {
   transform: scale(1.2);
@@ -154,7 +147,7 @@ input[type="color"]::-webkit-color-swatch:hover {
         font-size: 38px;
         border: none;
         background: transparent;
-        transition: 0.3s;
+        transition: transform 0.3s;
 
         &:hover{
           transform: scale(1.2);
@@ -171,6 +164,7 @@ input[type="color"]::-webkit-color-swatch:hover {
       align-items: center;
       padding: 15px 0 50px;
       overflow-y: scroll;
+      box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
 
       .innercolorpalette {
         width: 100%;
@@ -194,6 +188,13 @@ input[type="color"]::-webkit-color-swatch:hover {
           padding-top: 10px;
           font-size: 90%;
         }
+        .colorchooser {
+          margin: 0;
+          padding: 0;
+          border-radius: 50%;
+          box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
+        }
+
         .gradientchooser {
           cy: 24;
           r: 22;

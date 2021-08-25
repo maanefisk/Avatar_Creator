@@ -173,11 +173,13 @@ function thenumber(chosennumber) {
 /*Changes color of chosen category + if element has 2 elements in it, it gives a darker color to that also.*/
 function changingcolor(thecolorpicker) {
     let o = 0;
-    if (chosenelement == '' || 'background') {
+
+    if (chosenelement == '' || categoryathand == 'background') {
         document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
 
         let colorpalettebackground = thecolorpicker.style.background || thecolorpicker.value;
         let colorwithopacity;
+
         if (colorpalettebackground != null) {
             if (colorpalettebackground.slice(0,1) == 'r') {
                 let rbga = 'a';
