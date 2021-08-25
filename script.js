@@ -178,20 +178,24 @@ function changingcolor(thecolorpicker) {
 
         let colorpalettebackground = thecolorpicker.style.background || thecolorpicker.value;
         let colorwithopacity;
-
-        if (colorpalettebackground.slice(0,1) == 'r') {
-            let rbga = 'a';
-            let opacityvalue = ', 0.7'
-            let withrgba = [colorpalettebackground.slice(0, 3), rbga, colorpalettebackground.slice(3)].join('');
-            let lastindex = withrgba.lastIndexOf(')');
-            colorwithopacity = [withrgba.slice(0, lastindex), opacityvalue, withrgba.slice(lastindex)].join('');
+        if (colorpalettebackground != null) {
+            if (colorpalettebackground.slice(0,1) == 'r') {
+                let rbga = 'a';
+                let opacityvalue = ', 0.7'
+                let withrgba = [colorpalettebackground.slice(0, 3), rbga, colorpalettebackground.slice(3)].join('');
+                let lastindex = withrgba.lastIndexOf(')');
+                colorwithopacity = [withrgba.slice(0, lastindex), opacityvalue, withrgba.slice(lastindex)].join('');
+            } else {
+                colorwithopacity = colorpalettebackground + 'B2';
+            }
         } else {
-            colorwithopacity = colorpalettebackground + 'B2';
+            colorpalettebackground = '#EBEBEB';
+            colorwithopacity = '#EBEBEBB2';
         }
 
         document.getElementById('colorpaletteholder').style.background = colorwithopacity;
         document.getElementById('colorpaletteholder').style.color = colorpalettebackground;
-        
+
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
         chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
