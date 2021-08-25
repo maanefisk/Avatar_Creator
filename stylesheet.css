@@ -250,12 +250,24 @@ body {
   display: flex;
   flex-direction: row;
 }
+.column2holder button {
+  height: 50px;
+  cursor: pointer;
+  font-size: 38px;
+  border: none;
+  background: transparent;
+  transition: transform 0.3s;
+}
+.column2holder button:hover {
+  transform: scale(1.2);
+}
 .column2holder .column2 {
   height: 50px;
   width: 701px;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 .column2holder .column2 .menutext {
   color: #343434;

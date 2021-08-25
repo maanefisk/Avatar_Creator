@@ -259,12 +259,25 @@ body {
   display: flex;
   flex-direction: row;
 
+   button {
+    height: 50px;
+    cursor: pointer;
+    font-size: 38px;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
   .column2 {
     height: 50px;
     width: 701px;
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow: hidden;
+    scroll-behavior: smooth;
 
     .menutext {
       color: #343434;

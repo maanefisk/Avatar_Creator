@@ -513,6 +513,16 @@ function changinggradient(colorforgradient) {
     }
 }
 
+function scrollIt(button) {
+    let column2 = document.getElementById('column2');
+    let scrollwidth = column2.scrollWidth;
+
+    if (button.id == 'rightmenu') {
+        column2.scrollLeft += scrollwidth;
+    } else {column2.scrollLeft -= scrollwidth;}
+
+}
+
 
 
 
