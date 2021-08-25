@@ -125,10 +125,11 @@ input[type="color"]::-webkit-color-swatch:hover {
   }
 
   .colorpaletteholder {
-    background: #73caee;
+    background: rgba(115, 202, 238, 0.7);
+    color: #73caee;
     filter: brightness(110%);
     height: 500px;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,36 +137,39 @@ input[type="color"]::-webkit-color-swatch:hover {
 
 
     .paletteswitchbuttonholder {
-      width: 200px;
+      background: inherit;
+      position: absolute;
+      bottom: 0;
+      color: inherit;
+      width: 220px;
       display: flex;
+      justify-content: center;
 
       & button {
+        color: inherit;
+        filter: brightness(75%);
         height: 50px;
         cursor: pointer;
         font-size: 38px;
         border: none;
         background: transparent;
+        transition: 0.3s;
 
-        & i {
-          transition: 0.3s;
-        }
-
-        &:hover > i {
+        &:hover{
           transform: scale(1.2);
-          color: #00BFFF;
+          color: inherit;
         }
       }
     }
 
-
-
     .colorpalette {
+      height: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
-
       align-items: center;
-      padding: 15px 0;
+      padding: 15px 0 50px 20px;
+      overflow-y: scroll;
 
       .innercolorpalette {
         width: 100%;
@@ -176,10 +180,14 @@ input[type="color"]::-webkit-color-swatch:hover {
         animation: appear 0.3s ease-in forwards;
 
         .paletteheader {
+          color: inherit;
+          filter: brightness(70%);
           width: 100%;
           text-align: center;
         }
         .paletteheader2 {
+          color: inherit;
+          filter: brightness(70%);
           width: 100%;
           text-align: center;
           padding-top: 10px;
@@ -231,17 +239,17 @@ input[type="color"]::-webkit-color-swatch:hover {
           }
         }
       }
+      /*.palette2 {
+        width: 90px;
+      }*/
       .palette2 {
         width: 310px;
       }
       .palette4 , .palette5 {
-        width: 530px !important;
+        width: 250px !important;
       }
       .palette6 {
         width: 265px;
-      }
-      .palette7 {
-        width: 530px;
       }
     }
 

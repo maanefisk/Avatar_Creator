@@ -175,7 +175,15 @@ function changingcolor(thecolorpicker) {
     let o = 0;
     if (chosenelement == '' || 'background') {
         document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
-        document.getElementById('colorpaletteholder').style.background = thecolorpicker.style.background || thecolorpicker.value;
+
+        let colorpalettebackground = thecolorpicker.style.background || thecolorpicker.value;
+        let rbga = 'a';
+        let opacityvalue = ', 0.7'
+        let withrgba = [colorpalettebackground.slice(0, 3), rbga, colorpalettebackground.slice(3)].join('');
+        let lastindex = withrgba.lastIndexOf(')');
+        let colorwithopacity = [withrgba.slice(0, lastindex), opacityvalue, withrgba.slice(lastindex)].join('');
+        document.getElementById('colorpaletteholder').style.background = colorwithopacity;
+        document.getElementById('colorpaletteholder').style.color = colorpalettebackground;
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
         chosenelement.style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');

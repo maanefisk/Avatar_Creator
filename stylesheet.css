@@ -134,39 +134,50 @@ input[type=color]::-webkit-color-swatch:hover {
   fill: #73caee;
 }
 .column1 .colorpaletteholder {
-  background: #73caee;
+  background: rgba(115, 202, 238, 0.7);
+  color: #73caee;
   filter: brightness(110%);
   height: 500px;
-  width: 200px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 .column1 .colorpaletteholder .paletteswitchbuttonholder {
-  width: 200px;
+  background: inherit;
+  position: absolute;
+  bottom: 0;
+  color: inherit;
+  width: 220px;
   display: flex;
+  justify-content: center;
 }
 .column1 .colorpaletteholder .paletteswitchbuttonholder button {
+  color: inherit;
+  filter: brightness(75%);
   height: 50px;
   cursor: pointer;
   font-size: 38px;
   border: none;
   background: transparent;
-}
-.column1 .colorpaletteholder .paletteswitchbuttonholder button i {
   transition: 0.3s;
 }
-.column1 .colorpaletteholder .paletteswitchbuttonholder button:hover > i {
+.column1 .colorpaletteholder .paletteswitchbuttonholder button:hover {
   transform: scale(1.2);
-  color: #00BFFF;
+  color: inherit;
 }
 .column1 .colorpaletteholder .colorpalette {
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 0 50px 20px;
+  overflow-y: scroll;
+  /*.palette2 {
+    width: 90px;
+  }*/
 }
 .column1 .colorpaletteholder .colorpalette .innercolorpalette {
   width: 100%;
@@ -177,10 +188,14 @@ input[type=color]::-webkit-color-swatch:hover {
   animation: appear 0.3s ease-in forwards;
 }
 .column1 .colorpaletteholder .colorpalette .innercolorpalette .paletteheader {
+  color: inherit;
+  filter: brightness(70%);
   width: 100%;
   text-align: center;
 }
 .column1 .colorpaletteholder .colorpalette .innercolorpalette .paletteheader2 {
+  color: inherit;
+  filter: brightness(70%);
   width: 100%;
   text-align: center;
   padding-top: 10px;
@@ -229,13 +244,10 @@ input[type=color]::-webkit-color-swatch:hover {
   width: 310px;
 }
 .column1 .colorpaletteholder .colorpalette .palette4, .column1 .colorpaletteholder .colorpalette .palette5 {
-  width: 530px !important;
+  width: 250px !important;
 }
 .column1 .colorpaletteholder .colorpalette .palette6 {
   width: 265px;
-}
-.column1 .colorpaletteholder .colorpalette .palette7 {
-  width: 530px;
 }
 
 .column2 {
