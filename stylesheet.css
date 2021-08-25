@@ -46,7 +46,7 @@ input[type=color]::-webkit-color-swatch:hover {
   align-items: center;
 }
 .top .header {
-  width: 701px;
+  width: 801px;
   font-size: 50px;
 }
 
@@ -148,8 +148,9 @@ input[type=color]::-webkit-color-swatch:hover {
   background: inherit;
   position: absolute;
   bottom: 0;
+  left: 0;
   color: inherit;
-  width: 220px;
+  width: 280px;
   display: flex;
   justify-content: center;
 }
@@ -173,11 +174,8 @@ input[type=color]::-webkit-color-swatch:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 0 50px 20px;
+  padding: 15px 0 50px;
   overflow-y: scroll;
-  /*.palette2 {
-    width: 90px;
-  }*/
 }
 .column1 .colorpaletteholder .colorpalette .innercolorpalette {
   width: 100%;
@@ -241,7 +239,7 @@ input[type=color]::-webkit-color-swatch:hover {
   transform: scale(1.2);
 }
 .column1 .colorpaletteholder .colorpalette .palette2 {
-  width: 310px;
+  width: 90px;
 }
 .column1 .colorpaletteholder .colorpalette .palette4, .column1 .colorpaletteholder .colorpalette .palette5 {
   width: 250px !important;
@@ -252,14 +250,12 @@ input[type=color]::-webkit-color-swatch:hover {
 
 .column2 {
   height: 50px;
-  width: 701px;
-  background: transparent;
+  width: 801px;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
 }
 .column2 .menutext {
-  background: #efefef;
   color: #343434;
   font-family: Roboto, sans-serif;
   font-size: 20px;
