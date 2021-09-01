@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #EBEBEB;
+  background: #d8d8d8; /*#EBEBEB*/
 }
 
 .top {
@@ -98,19 +98,20 @@ body {
   }
 
   .colorpaletteholder {
-    background: rgba(115, 202, 238, 0.7);
-    color: #73caee;
-    filter: brightness(110%);
+    background: rgba(235, 235, 235, 0.7);
+    color: #A6A6A6;
+    backdrop-filter: brightness(110%);
     height: 500px;
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0 16px 16px 0;
 
     .paletteswitchbuttonholder {
-      background: inherit;
+      background: rgba(235, 235, 235, 0.8);
       position: absolute;
       bottom: 0;
       left: 0;
@@ -118,20 +119,20 @@ body {
       width: 300px;
       display: flex;
       justify-content: center;
+      border-radius: 0 0 16px 0;
 
       & button {
-        color: inherit;
-        filter: brightness(75%);
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         height: 50px;
         cursor: pointer;
         font-size: 38px;
         border: none;
         background: transparent;
-        transition: transform 0.3s;
+        transition: 0.3s;
 
         &:hover{
           transform: scale(1.2);
-          color: inherit;
         }
       }
     }
@@ -142,9 +143,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 15px 0 50px;
+      padding: 15px 0 53px;
       overflow-y: scroll;
-      box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
 
       .innercolorpalette {
         width: 100%;
@@ -155,8 +155,6 @@ body {
         animation: appear 0.3s ease-in forwards;
 
         .paletteheader {
-          color: inherit;
-          filter: brightness(70%);
           width: 100%;
           text-align: center;
         }
@@ -172,7 +170,7 @@ body {
           margin: 0;
           padding: 0;
           border-radius: 50%;
-          box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
+          box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .gradientchooser {
@@ -216,7 +214,7 @@ body {
           border: none;
           border-radius: 50%;
           transition: 0.3s;
-          box-shadow:  1px 1px 6px rgba(0, 0, 0, 0.3);
+          box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.2);
         }
         input[type="color"]::-webkit-color-swatch:hover {
           transform: scale(1.2);
@@ -258,45 +256,54 @@ body {
   width: 801px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 
    button {
-    height: 50px;
-    cursor: pointer;
-    font-size: 38px;
-    border: none;
-    background: transparent;
-    transition: transform 0.3s;
+     color: white;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+     height: 50px;
+     cursor: pointer;
+     font-size: 38px;
+     border: none;
+     background: transparent;
+     transition: 0.3s;
 
     &:hover{
       transform: scale(1.2);
     }
   }
   .column2 {
+    background: rgba(235, 235, 235, 0.7);
+    backdrop-filter: brightness(110%);
+    box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
     height: 50px;
     width: 701px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     scroll-behavior: smooth;
+    margin: 0 6px;
+    padding: 0 6px;
+    text-align: center;
 
     .menutext {
-      color: #343434;
+      color: white;
+      font-weight: bold;
       font-family: Roboto, sans-serif;
       font-size: 20px;
       text-transform: uppercase;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: font-size 0.1s;
+      text-align: center;
+      transition: 0.1s;
       border: none;
       height: 100%;
-      box-shadow:  1px 1px 2px #bebebe,
-      -1px -1px 2px #ffffff;
+      padding: 0 6px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 
       &:hover {
         cursor: pointer;
         font-size: 25px;
-        font-weight: bold;
+        padding: 0 12px;
       }
     }
   }
@@ -351,6 +358,9 @@ body {
   inset -1px -1px 2px #ffffff !important;
   background: linear-gradient(145deg, #e2e2e2, #efefef) !important;
 }
+.opacity {
+  opacity: 0.5;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -360,7 +370,8 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: inherit;
+  background: transparent;
+  margin: 16px 0 60px 0;
 }
 
 /* Handle */
@@ -369,12 +380,11 @@ body {
   background: rgba(255, 255, 255, 0.5);
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: white;
 }
 
 /*Keyframes*/

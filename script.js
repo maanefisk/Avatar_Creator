@@ -177,7 +177,8 @@ function changingcolor(thecolorpicker) {
     if (chosenelement == '' || categoryathand == 'background') {
         document.getElementById('background1').style.fill = thecolorpicker.style.background || thecolorpicker.value || thecolorpicker.getAttribute('fill');
 
-        let colorpalettebackground = thecolorpicker.style.background || thecolorpicker.value;
+        /*IF YOU WANT COLORPALETTE TO GET SAME COLOR AS CHOSEN, UNCOMMENT THIS:*/
+        /*let colorpalettebackground = thecolorpicker.style.background || thecolorpicker.value;
         let colorwithopacity;
 
         if (colorpalettebackground != null) {
@@ -196,7 +197,7 @@ function changingcolor(thecolorpicker) {
         }
 
         document.getElementById('colorpaletteholder').style.background = colorwithopacity;
-        document.getElementById('colorpaletteholder').style.color = colorpalettebackground;
+        document.getElementById('colorpaletteholder').style.color = colorpalettebackground;*/
 
     } else {
         /*Gives the background if the colorchooser is DIV/Not customizable*/
@@ -355,7 +356,7 @@ function generateview() {
 
         textofcategories += "<button id=\""
             +chosencategory+
-            "\" class=\"menutext\" onClick=\"category(this)\">"
+            "\" class=\"menutext\" onClick=\"category(this)\" onmouseover=\"scrollToIt(this)\">"
             +chosencategory +"</button>";
     }
 
@@ -523,6 +524,9 @@ function scrollIt(button) {
 
 }
 
+function scrollToIt(textInMenu) {
+    textInMenu.scrollIntoView({behavior: 'smooth', block: 'center'});  /*, inline: 'center'*/
+}
 
 
 
