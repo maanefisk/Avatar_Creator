@@ -575,7 +575,8 @@ function paletteswitch(butt) {
 /*Here the image of avatar should be downloaded, future*/
 function download() {
   let svg = document.getElementById("avatar").outerHTML;
-  console.log(svg);
+  /* console.log(svg); */
+  alert("Kommer snart");
 
   const filename = "avatar.svg";
   let svgData = svg;
