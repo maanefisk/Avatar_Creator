@@ -104,8 +104,16 @@ body {
       color: inherit;
       width: 300px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       border-radius: 0 0 16px 0;
+
+      & .explainbuttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+      }
 
       & button {
         color: white;
@@ -277,7 +285,7 @@ body {
       color: black;
       font-weight: bold;
       font-family: Roboto, sans-serif;
-      font-size: 20px;
+      font-size: 18px !important;
       text-transform: uppercase;
       text-align: center;
       transition: 0.1s;
@@ -313,7 +321,7 @@ body {
   .number {
     color: black;
     font-family: Roboto, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
