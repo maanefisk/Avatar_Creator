@@ -267,7 +267,6 @@ body {
   overflow: hidden;
   scroll-behavior: smooth;
   margin: 0 6px;
-  padding: 0 6px;
   text-align: center;
 }
 .column2holder .column2 .menutext {
@@ -280,7 +279,7 @@ body {
   transition: 0.1s;
   border: none;
   height: 100%;
-  padding: 0 6px;
+  padding: 0 12px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 .column2holder .column2 .menutext:hover {
