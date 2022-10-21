@@ -107,7 +107,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 6px;
+}
+.column1 .colorpaletteholder .paletteswitchbuttonholder .explainbuttons div {
+  text-align: center;
+  width: 50px;
+  overflow: hidden;
+  font-size: 12px;
 }
 .column1 .colorpaletteholder .paletteswitchbuttonholder button {
   color: white;
