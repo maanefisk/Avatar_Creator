@@ -165,11 +165,11 @@ function category(chosencategory) {
     paletteswitch();
   }
   let paletteholder = document.getElementById("colorpaletteholder");
-  if (activecategory == "eyes" || activecategory == "pupils") {
+  /* if (activecategory == "eyes" || activecategory == "pupils") {
     paletteholder.style.display = "none";
   } else {
     paletteholder.style.display = "flex";
-  }
+  } */
 
   /*Make menucategory stand out*/
   if (lastbold != null) {
